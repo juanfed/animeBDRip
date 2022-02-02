@@ -31,11 +31,11 @@ const Inicio = () => {
 
 				<div className="card">
 					<div className="card__tittle">
-						<h3><a href="ListAnime/ano_natsu_de_matteru.html">{imagenes[0].tittle}</a></h3>
+						<h3><a href="ListAnime/ano_natsu_de_matteru.html">Ano natsu de matteru</a></h3>
 					</div>
 					<div className="card__img">
 						<figure className="card__img--figure">
-							<img loading="lazy" src={imagenes[0].name}
+							<img loading="lazy" src={imagenes.anoNatsuDeMatteru}
 								alt="Ano natsu de matteru" />
 						</figure>
 					</div>
@@ -47,11 +47,11 @@ const Inicio = () => {
 
 				<div className="card">
 					<div className="card__tittle">
-						<h3><a href="ListAnime/another.html">{imagenes[1].tittle}</a></h3>
+						<h3><a href="ListAnime/another.html">Another</a></h3>
 					</div>
 					<div className="card__img">
 						<figure className="card__img--figure">
-							<img loading="lazy" src={imagenes[1].name} alt="another" />
+							<img loading="lazy" src={imagenes.another} alt="another" />
 						</figure>
 					</div>
 					<div className="card__information">
@@ -62,11 +62,11 @@ const Inicio = () => {
 
 				<div className="card">
 					<div className="card__tittle">
-						<h3><a href="ListAnime/btoom.html">{imagenes[2].tittle}</a></h3>
+						<h3><a href="ListAnime/btoom.html">Btoom!</a></h3>
 					</div>
 					<div className="card__img">
 						<figure className="card__img--figure">
-							<img loading="lazy" src={imagenes[2].name} alt="Btooom!" />
+							<img loading="lazy" alt="Btooom!" />
 						</figure>
 					</div>
 					<div className="card__information">
