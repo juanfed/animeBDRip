@@ -1,0 +1,139 @@
+.nav__img{
+	width: 40px;
+}
+
+.nav{
+	background-color: red;
+	height: 4.8rem;
+	color: #ededed; /*Color al titulo de la pagina */
+}
+
+.nav__container h1 a{
+	font-size: 1.7rem;
+}
+
+.nav__input:checked + .nav__menu{
+	background-color: red;
+}
+
+/* aca trabajo en acodar cada uno de los elementos */
+
+.nav__container{
+	display: flex;
+	flex-direction: column;  /*Para que el tituo y el menu este uno debajo del otro*/
+	height: 100%;
+	width: 95%;
+	margin: 0 auto;
+	justify-content: space-between; 
+	align-items: center;  /* Para que centre los elementos verticalmente */;
+}
+
+
+/*Aca oculto el input y la imagen del hamburguer */
+
+.nav__label, .nav__input{
+	display: none;
+}
+
+
+/* acomodo los menus */
+
+.nav__menu{
+	display: grid;
+	grid-auto-flow: column; /* para que me los ponga uno al lado del otro */
+	gap: 1rem;
+	padding: .5rem 0rem;
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+.nav__menu a:hover{
+	color: black;
+}
+
+
+/*Linea blanca abajo de los menus y con animacion */
+
+
+.nav a{ /*para quitar los estilos a los menus de navegacion*/
+	color: white;
+	text-decoration: none;
+	--clippy: polygon(0 0, 0 0, 0 96%, 0% 100%); /* Custom property */
+}
+
+.nav__menu a::after{
+	content: "";
+	display: block;
+	background-color: #ededed;
+	width: 90%;
+	height: 3px;
+	clip-path: var(--clippy); /*hago que desaparezca la linea de abajo que hize */
+	transition: clip-path .35s;
+}
+
+/*animacion de la linea blanca de abajo enlace */
+
+.nav a:hover{
+	--clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);;
+}
+
+
+
+/* Para cuando se visualize en pantallas mas chicas */
+
+@media (max-width:700px){
+	header{
+		padding-bottom: 2rem;
+	}
+
+	.nav{
+		position: fixed;
+		width: 100%;
+		height: 3rem;
+		
+	}
+
+	.nav__container{
+		flex-direction: row;
+		width: 100%;
+		justify-content: center;
+	}
+
+	.nav__img{
+		position: fixed; /*Lo saco del flujo para poder acomodarlo a un lado*/
+		top: .3rem;
+		left: .5rem;
+	}
+	
+	.nav__label{
+		display: block;
+		cursor: pointer;
+	}
+	
+	.nav__menu{
+		position: fixed;
+		top: 3rem; /* bajo el menu de navegacion */
+		bottom: 0;
+		width: 100%;
+		left: 0;
+		/*acomodo los elementos del menu de navegacion*/
+		
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		clip-path: circle(0 at center);
+		transition: clip-path 0s; /*Tratar de mejorar*/
+	}
+	
+	/*hago que el menu aparesca y desaparesca cuando pulse el hamburger*/
+	
+	.nav__input:checked + .nav__menu{
+		clip-path: circle(100% at center);
+		transition: clip-path 2s;
+	}
+
+	.nav__menu a{
+		font-size: 1.6rem;
+	}
+}
