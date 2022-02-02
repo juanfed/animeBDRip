@@ -1,13 +1,15 @@
 import React from 'react';
+import '../styles/inicio.css'
+import imagenes from '../images/imagenes';
 
 const Inicio = () => {
     return (
         <main>
-            <section class="intro">
-			<div class="intro__h1">
+            <section className="intro">
+			<div className="intro__h1">
 				<h2>Bienvenidos</h2>
 			</div>
-			<div class="intro__paragraph">
+			<div className="intro__paragraph">
 				<p>Hola a todos esta es una pagina que ando haciendo no solo porque me gusta ver animes, si no por el echo
 					de que tambien hago esto para poder afianzar mis conocimientos en <b>programación web</b> y poder
 					conseguir trabajo y de paso adquirir más conocimientos y aplicarlos acá, ya que una de mis metas es hacer
@@ -19,267 +21,267 @@ const Inicio = () => {
 			</div>
 		</section>
 
-		<section class="anime">
-			<div class="anime__tittle">
+		<section className="anime">
+			<div className="anime__tittle">
 				<h2>Animes Agregados</h2>
 			</div>
 
 
-			<div class="cards--anime">
+			<div className="cards--anime">
 
-				<div class="card">
-					<div class="card__tittle">
-						<h3><a href="ListAnime/ano_natsu_de_matteru.html">Ano natsu de materu</a></h3>
+				<div className="card">
+					<div className="card__tittle">
+						<h3><a href="ListAnime/ano_natsu_de_matteru.html">{imagenes[0].tittle}</a></h3>
 					</div>
-					<div class="card__img">
-						<figure class="card__img--figure">
-							<img loading="lazy" src="images/images-Anime/ano-natsu-de-matteru/ano-natsu-de-matteru-01_optimized.jpg"
+					<div className="card__img">
+						<figure className="card__img--figure">
+							<img loading="lazy" src={imagenes[0].name}
 								alt="Ano natsu de matteru" />
 						</figure>
 					</div>
-					<div class="card__information">
+					<div className="card__information">
 						<p><b>Capitulos: </b>12</p>
 						<p><b>Temporadas: </b>1</p>
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card__tittle">
-						<h3><a href="ListAnime/another.html">Another</a></h3>
+				<div className="card">
+					<div className="card__tittle">
+						<h3><a href="ListAnime/another.html">{imagenes[1].tittle}</a></h3>
 					</div>
-					<div class="card__img">
-						<figure class="card__img--figure">
-							<img loading="lazy" src="images/images-Anime/another/another-01_optimized.jpg" alt="another" />
+					<div className="card__img">
+						<figure className="card__img--figure">
+							<img loading="lazy" src={imagenes[1].name} alt="another" />
 						</figure>
 					</div>
-					<div class="card__information">
+					<div className="card__information">
 						<p><b>Capitulos: </b>12</p>
 						<p><b>Temporadas: </b>1</p>
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card__tittle">
-						<h3><a href="ListAnime/btoom.html">Btoom!</a></h3>
+				<div className="card">
+					<div className="card__tittle">
+						<h3><a href="ListAnime/btoom.html">{imagenes[2].tittle}</a></h3>
 					</div>
-					<div class="card__img">
-						<figure class="card__img--figure">
-							<img loading="lazy" src="images/images-Anime/btoom!/btoom!-01_optimized.jpg" alt="Btooom!" />
+					<div className="card__img">
+						<figure className="card__img--figure">
+							<img loading="lazy" src={imagenes[2].name} alt="Btooom!" />
 						</figure>
 					</div>
-					<div class="card__information">
+					<div className="card__information">
 						<p><b>Capitulos: </b>12</p>
 						<p><b>Temporadas: </b>1</p>
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card__tittle">
+				<div className="card">
+					<div className="card__tittle">
 						<h3><a href="ListAnime/deadman_wonderland.html">Deadman wonderland</a></h3>
 					</div>
-					<div class="card__img">
-						<figure class="card__img--figure">
+					<div className="card__img">
+						<figure className="card__img--figure">
 							<img loading="lazy" src="images/images-Anime/deadman-wonderland/deadman-wonderland-01_optimized.jpg" alt="Deadman wonderland" />
 						</figure>
 					</div>
-					<div class="card__information">
+					<div className="card__information">
 						<p><b>Capitulos: </b>12</p>
 						<p><b>Temporadas: </b>1</p>
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card__tittle">
+				<div className="card">
+					<div className="card__tittle">
 						<h3><a href="ListAnime/gangsta.html">Gangsta</a></h3>
 					</div>
-					<div class="card__img">
-						<figure class="card__img--figure">
+					<div className="card__img">
+						<figure className="card__img--figure">
 							<img loading="lazy" src="images/images-Anime/gangsta/gangsta-01_optimized.jpg" alt="Gansta" />
 						</figure>
 					</div>
-					<div class="card__information">
+					<div className="card__information">
 						<p><b>Capitulos: </b>12</p>
 						<p><b>Temporadas: </b>1</p>
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card__tittle">
+				<div className="card">
+					<div className="card__tittle">
 						<h3><a href="ListAnime/golden_time.html">Golden time</a></h3>
 					</div>
-					<div class="card__img">
-						<figure class="card__img--figure">
+					<div className="card__img">
+						<figure className="card__img--figure">
 							<img loading="lazy" src="images/images-Anime/golden-time/golden-time-01_optimized.jpg" alt="Golden time" />
 						</figure>
 					</div>
-					<div class="card__information">
+					<div className="card__information">
 						<p><b>Capitulos: </b>12</p>
 						<p><b>Temporadas: </b>1</p>
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card__tittle">
+				<div className="card">
+					<div className="card__tittle">
 						<h3><a href="ListAnime/inuyashiki.html">Inuyashiki</a></h3>
 					</div>
-					<div class="card__img">
-						<figure class="card__img--figure">
+					<div className="card__img">
+						<figure className="card__img--figure">
 							<img loading="lazy" src="images/images-Anime/inuyashiki/inuyashiki-01_optimized.jpg" alt="Inuyashiki" />
 						</figure>
 					</div>
-					<div class="card__information">
+					<div className="card__information">
 						<p><b>Capitulos: </b>12</p>
 						<p><b>Temporadas: </b>1</p>
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card__tittle">
+				<div className="card">
+					<div className="card__tittle">
 						<h3><a href="ListAnime/kousetsu_no_kabaneri.html">Kousetsu no kabaneri</a></h3>
 					</div>
-					<div class="card__img">
-						<figure class="card__img--figure">
+					<div className="card__img">
+						<figure className="card__img--figure">
 							<img loading="lazy" src="images/images-Anime/kousetsu-no-kabaneri/kousetsu-no-kabaneri_optimized.jpg" alt="Kousetsu no kabaneri" />
 						</figure>
 					</div>
-					<div class="card__information">
+					<div className="card__information">
 						<p><b>Capitulos: </b>12</p>
 						<p><b>Temporadas: </b>1</p>
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card__tittle">
+				<div className="card">
+					<div className="card__tittle">
 						<h3><a href="ListAnime/one_punch_man.html">One punch man</a></h3>
 					</div>
-					<div class="card__img">
-						<figure class="card__img--figure">
+					<div className="card__img">
+						<figure className="card__img--figure">
 							<img loading="lazy" src="images/images-Anime/one-punch-man/one-punch-man-01_optimized.jpg" alt="One punch man" />
 						</figure>
 					</div>
-					<div class="card__information">
+					<div className="card__information">
 						<p><b>Capitulos: </b>12</p>
 						<p><b>Temporadas: </b>1</p>
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card__tittle">
+				<div className="card">
+					<div className="card__tittle">
 						<h3><a href="ListAnime/ookami_shoujo_to_kuro_ouji.html">Ookami shoujo to kuro ouji</a></h3>
 					</div>
-					<div class="card__img">
-						<figure class="card__img--figure">
+					<div className="card__img">
+						<figure className="card__img--figure">
 							<img loading="lazy" src="images/images-Anime/ookami-shoujo-to-kuro-ouji/ookami-shoujo-to-kuro-ouji-01_optimized.jpg"
 								alt="Ookami shoujo to kuro ouji" />
 						</figure>
 					</div>
-					<div class="card__information">
+					<div className="card__information">
 						<p><b>Capitulos: </b>12</p>
 						<p><b>Temporadas: </b>1</p>
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card__tittle">
+				<div className="card">
+					<div className="card__tittle">
 						<h3><a href="ListAnime/parasyte.html">Parasyte</a></h3>
 					</div>
-					<div class="card__img">
-						<figure class="card__img--figure">
+					<div className="card__img">
+						<figure className="card__img--figure">
 							<img loading="lazy" src="images/images-Anime/parasyte/parasyte-01_optimized.jpg" alt="Parasyte" />
 						</figure>
 					</div>
-					<div class="card__information">
+					<div className="card__information">
 						<p><b>Capitulos: </b>12</p>
 						<p><b>Temporadas: </b>1</p>
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card__tittle">
+				<div className="card">
+					<div className="card__tittle">
 						<h3><a href="ListAnime/re_life.html">Re Life</a></h3>
 					</div>
-					<div class="card__img">
-						<figure class="card__img--figure">
+					<div className="card__img">
+						<figure className="card__img--figure">
 							<img loading="lazy" src="images/images-Anime/re-life/re-life-01_optimized.jpg" alt="Re-Life" />
 						</figure>
 					</div>
-					<div class="card__information">
+					<div className="card__information">
 						<p><b>Capitulos: </b>12</p>
 						<p><b>Temporadas: </b>1</p>
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card__tittle">
+				<div className="card">
+					<div className="card__tittle">
 						<h3><a href="ListAnime/re_zero.html">Re zero</a></h3>
 					</div>
-					<div class="card__img">
-						<figure class="card__img--figure">
+					<div className="card__img">
+						<figure className="card__img--figure">
 							<img loading="lazy" src="images/images-Anime/re-zero/re-zero-01_optimized.jpg" alt="Re-Zero" />
 						</figure>
 					</div>
-					<div class="card__information">
+					<div className="card__information">
 						<p><b>Capitulos: </b>12</p>
 						<p><b>Temporadas: </b>1</p>
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card__tittle">
+				<div className="card">
+					<div className="card__tittle">
 						<h3><a href="ListAnime/rokka_no_yuusha.html">Rokka no yuusha</a></h3>
 					</div>
-					<div class="card__img">
-						<figure class="card__img--figure">
+					<div className="card__img">
+						<figure className="card__img--figure">
 							<img loading="lazy" src="images/images-Anime/rokka-no-yuusha/rokka-no-yuusha-01_optimized.jpg" alt="Rokka no yuusha" />
 						</figure>
 					</div>
-					<div class="card__information">
+					<div className="card__information">
 						<p><b>Capitulos: </b>12</p>
 						<p><b>Temporadas: </b>1</p>
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card__tittle">
+				<div className="card">
+					<div className="card__tittle">
 						<h3><a href="ListAnime/sakurasou_no_pet_na_kanojo.html">Sakurasao no Pet na kanojo</a></h3>
 					</div>
-					<div class="card__img">
-						<figure class="card__img--figure">
+					<div className="card__img">
+						<figure className="card__img--figure">
 							<img loading="lazy" src="images/images-Anime/sakurasou-no-Pet-na-Kanojo/sakurasou-no-pet-na-kanojo-01_optimized.png"
 								alt="sakurasou no Pet na Kanojo" />
 						</figure>
 					</div>
-					<div class="card__information">
+					<div className="card__information">
 						<p><b>Capitulos: </b>12</p>
 						<p><b>Temporadas: </b>1</p>
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card__tittle">
+				<div className="card">
+					<div className="card__tittle">
 						<h3><a href="ListAnime/subete_ga_f_ni_haru.html">Subete ga F ni haru</a></h3>
 					</div>
-					<div class="card__img">
-						<figure class="card__img--figure">
+					<div className="card__img">
+						<figure className="card__img--figure">
 							<img loading="lazy" src="images/images-Anime/subete-ga-F-ni-haru/subete-ga-f-ni-haru-01_optimized.jpg" alt="Subete ga F ni haru" />
 						</figure>
 					</div>
-					<div class="card__information">
+					<div className="card__information">
 						<p><b>Capitulos: </b>12</p>
 						<p><b>Temporadas: </b>1</p>
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card__tittle">
+				<div className="card">
+					<div className="card__tittle">
 						<h3><a href="ListAnime/youjo_senki.html">Youjo Senki</a></h3>
 					</div>
-					<div class="card__img">
-						<figure class="card__img--figure">
+					<div className="card__img">
+						<figure className="card__img--figure">
 							<img loading="lazy" src="images/images-Anime/youjo-senki/youjo-senki-01_optimized.jpg" alt="Youjo Senki" />
 						</figure>
 					</div>
-					<div class="card__information">
+					<div className="card__information">
 						<p><b>Capitulos: </b>12</p>
 						<p><b>Temporadas: </b>1</p>
 					</div>
@@ -290,11 +292,11 @@ const Inicio = () => {
 
 		</section>
 
-		<section class="newAnimes">
-			<div class="newAnimes__tittle">
+		<section className="newAnimes">
+			<div className="newAnimes__tittle">
 				<h2>Proximos animes</h2>
 			</div>
-			<div class="newAnimes__list">
+			<div className="newAnimes__list">
 				<h4>Ao no exorcist</h4>
 				<h4>Asobi asobase</h4>
 				<h4>Banana fish</h4>
