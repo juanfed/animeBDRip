@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/inicio.css'  //aca tambien estan los estilos del copoente CardAnime
-import imagenes from '../images/imagenes';		//importo las imagenes para las card
-import CardAnime from '../components/CardAnime';
+import Imagenes from '../components/Imagenes';		//importo las imagenes para las card
+import CardAnime from '../components/CardAnime'; // importo ese compoenente para poder modularizar el codigo
 
 const Inicio = () => {
 	return (
@@ -28,23 +28,23 @@ const Inicio = () => {
 				</div>
 
 				<div className="cards--anime">
-					<CardAnime ruta="#" title="Ano natsu de matteru" imagen={imagenes.anoNatsuDeMatteru} cap="12 + Ova" tem="1" />
-					<CardAnime ruta="#" title="Another" imagen={imagenes.another} cap="12" tem="1 + Ova" />
-					<CardAnime ruta="#" title="Btooom!" imagen={imagenes.btoom} cap="12" tem="1" />
-					<CardAnime ruta="#" title="Deadman wonderland" imagen={imagenes.deadmanWonderland} cap="12" tem="1 + Ova" />
-					<CardAnime ruta="#" title="Gangsta" imagen={imagenes.gangsta} cap="12" tem="1" />
-					<CardAnime ruta="#" title="Golden time" imagen={imagenes.goldenTime} cap="24" tem="1" />
-					<CardAnime ruta="#" title="Inuyashiki" imagen={imagenes.inuyashiki} cap="12" tem="1" />
-					<CardAnime ruta="#" title="Kousetsu no kabaneri" imagen={imagenes.kousetsuNoKabaneri} cap="12" tem="1 + 3 Films" />
-					<CardAnime ruta="#" title="One punch man" imagen={imagenes.onePunchMan} cap="12" tem="2" />
-					<CardAnime ruta="#" title="Ookami shoujo to kuro ouji" imagen={imagenes.ookamiShoujoToKuroOuji} cap="12" tem="1" />
-					<CardAnime ruta="#" title="Parasyte" imagen={imagenes.parasyte} cap="24" tem="1" />
-					<CardAnime ruta="#" title="Re Life" imagen={imagenes.reLife} cap="13" tem="1 + 4 Ovas" />
-					<CardAnime ruta="#" title="Re zero" imagen={imagenes.reZero} cap="25" tem="2" />
-					<CardAnime ruta="#" title="Rokka no yuusha" imagen={imagenes.rokkaNoYuusha} cap="12" tem="1" />
-					<CardAnime ruta="#" title="Sakurasou no Pet na kanojo" imagen={imagenes.sakurasouNoPetNaKanojo} cap="24" tem="1" />
-					<CardAnime ruta="#" title="Subete ga F ni haru" imagen={imagenes.subeteGaFNiHaru} cap="11" tem="1" />
-					<CardAnime ruta="#" title="Youjo senki" imagen={imagenes.youjoSenki} cap="12" tem="1" />
+					<CardAnime ruta="#" title="Ano natsu de matteru" imagen={Imagenes.anoNatsuDeMatteru} cap="12 + Ova" tem="1" />
+					<CardAnime ruta="#" title="Another" imagen={Imagenes.another} cap="12" tem="1 + Ova" />
+					<CardAnime ruta="#" title="Btooom!" imagen={Imagenes.btoom} cap="12" tem="1" />
+					<CardAnime ruta="#" title="Deadman wonderland" imagen={Imagenes.deadmanWonderland} cap="12" tem="1 + Ova" />
+					<CardAnime ruta="#" title="Gangsta" imagen={Imagenes.gangsta} cap="12" tem="1" />
+					<CardAnime ruta="#" title="Golden time" imagen={Imagenes.goldenTime} cap="24" tem="1" />
+					<CardAnime ruta="#" title="Inuyashiki" imagen={Imagenes.inuyashiki} cap="12" tem="1" />
+					<CardAnime ruta="#" title="Kousetsu no kabaneri" imagen={Imagenes.kousetsuNoKabaneri} cap="12" tem="1 + 3 Films" />
+					<CardAnime ruta="#" title="One punch man" imagen={Imagenes.onePunchMan} cap="12" tem="2" />
+					<CardAnime ruta="#" title="Ookami shoujo to kuro ouji" imagen={Imagenes.ookamiShoujoToKuroOuji} cap="12" tem="1" />
+					<CardAnime ruta="#" title="Parasyte" imagen={Imagenes.parasyte} cap="24" tem="1" />
+					<CardAnime ruta="#" title="Re Life" imagen={Imagenes.reLife} cap="13" tem="1 + 4 Ovas" />
+					<CardAnime ruta="#" title="Re zero" imagen={Imagenes.reZero} cap="25" tem="2" />
+					<CardAnime ruta="#" title="Rokka no yuusha" imagen={Imagenes.rokkaNoYuusha} cap="12" tem="1" />
+					<CardAnime ruta="#" title="Sakurasou no Pet na kanojo" imagen={Imagenes.sakurasouNoPetNaKanojo} cap="24" tem="1" />
+					<CardAnime ruta="#" title="Subete ga F ni haru" imagen={Imagenes.subeteGaFNiHaru} cap="11" tem="1" />
+					<CardAnime ruta="#" title="Youjo senki" imagen={Imagenes.youjoSenki} cap="12" tem="1" />
 				</div>
 
 			</section>
