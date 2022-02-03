@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/animeBDRip/static/css/main.81f0c03e.css",
+    "main.js": "/animeBDRip/static/js/main.46831cb8.js",
+    "static/js/787.b611241d.chunk.js": "/animeBDRip/static/js/787.b611241d.chunk.js",
+    "static/media/sakurasou-no-pet-na-kanojo-01_optimized.png": "/animeBDRip/static/media/sakurasou-no-pet-na-kanojo-01_optimized.07ef829780e5088d63ae.png",
+    "static/media/ano-natsu-de-matteru-01_optimized.jpg": "/animeBDRip/static/media/ano-natsu-de-matteru-01_optimized.a43b75377459b27ed43f.jpg",
+    "static/media/ookami-shoujo-to-kuro-ouji-01_optimized.jpg": "/animeBDRip/static/media/ookami-shoujo-to-kuro-ouji-01_optimized.54223fe462db86618b45.jpg",
+    "static/media/subete-ga-f-ni-haru-01_optimized.jpg": "/animeBDRip/static/media/subete-ga-f-ni-haru-01_optimized.bc2b056f441c4fdf0e59.jpg",
+    "static/media/golden-time-01_optimized.jpg": "/animeBDRip/static/media/golden-time-01_optimized.8080d2bb1754f9966385.jpg",
+    "static/media/inuyashiki-01_optimized.jpg": "/animeBDRip/static/media/inuyashiki-01_optimized.0cc005ce5bde29f91b29.jpg",
+    "static/media/kousetsu-no-kabaneri-01_optimized.jpg": "/animeBDRip/static/media/kousetsu-no-kabaneri-01_optimized.9391b30757265a3c0026.jpg",
+    "static/media/re-zero-01_optimized.jpg": "/animeBDRip/static/media/re-zero-01_optimized.185dd96f9ca81f037c1b.jpg",
+    "static/media/btoom-01_optimized.jpg": "/animeBDRip/static/media/btoom-01_optimized.f73a86e10702df771b48.jpg",
+    "static/media/AnimeBDRip.png": "/animeBDRip/static/media/AnimeBDRip.fb7d7e5067f2fea6cbe5.png",
+    "static/media/parasyte-01_optimized.jpg": "/animeBDRip/static/media/parasyte-01_optimized.deb3545250e940682f13.jpg",
+    "static/media/another-01_optimized.jpg": "/animeBDRip/static/media/another-01_optimized.e073663e77f3ae104668.jpg",
+    "static/media/gangsta-01_optimized.jpg": "/animeBDRip/static/media/gangsta-01_optimized.c013c31ddbde4113858e.jpg",
+    "static/media/youjo-senki-01_optimized.jpg": "/animeBDRip/static/media/youjo-senki-01_optimized.2c8dbf1213c2f9827ea0.jpg",
+    "static/media/rokka-no-yuusha-01_optimized.jpg": "/animeBDRip/static/media/rokka-no-yuusha-01_optimized.b36e438367f13804704c.jpg",
+    "static/media/drive.png": "/animeBDRip/static/media/drive.e0bd97d822e4f2d63789.png",
+    "static/media/re-life-01_optimized.jpg": "/animeBDRip/static/media/re-life-01_optimized.9fecf1334ffc70feb6be.jpg",
+    "static/media/one-punch-man-01_optimized.jpg": "/animeBDRip/static/media/one-punch-man-01_optimized.762dc8ef6ed6c40c80c0.jpg",
+    "static/media/deadman-wonderland-01_optimized.jpg": "/animeBDRip/static/media/deadman-wonderland-01_optimized.f965755d33d1512b0915.jpg",
+    "static/media/mediafire.png": "/animeBDRip/static/media/mediafire.63c09480e87b9a291663.png",
+    "static/media/discord.png": "/animeBDRip/static/media/discord.d538ceed682535bb59a6.png",
+    "index.html": "/animeBDRip/index.html",
+    "static/media/menuHamburguer.svg": "/animeBDRip/static/media/menuHamburguer.d8ddf0e335cdbd800e1dc8ca17f8d1f5.svg",
+    "main.81f0c03e.css.map": "/animeBDRip/static/css/main.81f0c03e.css.map",
+    "main.46831cb8.js.map": "/animeBDRip/static/js/main.46831cb8.js.map",
+    "787.b611241d.chunk.js.map": "/animeBDRip/static/js/787.b611241d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81f0c03e.css",
+    "static/js/main.46831cb8.js"
+  ]
+}
