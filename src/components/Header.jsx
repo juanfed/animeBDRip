@@ -8,7 +8,7 @@ const Header = () => {
     <header >
         <nav className="nav">
 			<div className="nav__container">
-				<h1 className="nav__logo"><Link to="" id="tittle">AnimeBDRip</Link></h1>
+				<h1 className="nav__logo"><Link to="/animeBDRip" id="tittle">AnimeBDRip</Link></h1>
 
 				{/* Aca irá el icono para desplegar el menu en dispositivos moviles */}
 				<label for="menu" className="nav__label">
@@ -18,7 +18,7 @@ const Header = () => {
 
 				<div className="nav__menu">
 
-					<Link to="">Inicio</Link>
+					<Link to="/animeBDRip">Inicio</Link>
 					<Link to="listAnime">Lista Animes</Link>
 					<Link to="#">Manga</Link>
 					<Link to="#">Peliculas</Link>

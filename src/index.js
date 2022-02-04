@@ -10,9 +10,9 @@ import ListAnime from './pages/ListAnime';
 ReactDOM.render(
   <Router>
     <Routes>
-      <Route path="/" element={<App />}>
+      <Route path="/animeBDRip" element={<App />}>
         <Route index element={<Inicio />} />  {/* No coloco un path para que me lo cargue por defecto */}
-        <Route path="listAnime" element={<ListAnime />} />
+          <Route path="listAnime" element={<ListAnime />} />
         <Route />
       </Route>
     </Routes>

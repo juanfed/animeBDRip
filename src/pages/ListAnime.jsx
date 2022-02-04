@@ -3,9 +3,9 @@ import '../styles/listAnime.css';
 import { Link } from 'react-router-dom';
 
 const ListAnime = () => {
-    function TitleAnime(props) {
+    function TitleAnime({ruta, name}) {
         return (
-            <li><Link to={props.ruta}>{props.name}</Link></li>
+            <li><Link to={ruta}>{name}</Link></li>
         );
     }
 
