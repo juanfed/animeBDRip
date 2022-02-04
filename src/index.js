@@ -11,7 +11,7 @@ ReactDOM.render(
   <Router>
     <Routes>
       <Route path="/" element={<App />}>
-        <Route index element={<Inicio />} />  {/* No coloco un path para que me lo cargue por defecto */}
+        <Route path='' element={<Inicio />} />  {/* No coloco un path para que me lo cargue por defecto */}
         <Route path="listAnime" element={<ListAnime />} />
         <Route />
       </Route>
