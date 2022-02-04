@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/animeBDRip/static/css/main.62bd20af.css",
+    "main.css": "/animeBDRip/static/css/main.a6f582fb.css",
     "main.js": "/animeBDRip/static/js/main.e820315c.js",
     "static/js/787.b611241d.chunk.js": "/animeBDRip/static/js/787.b611241d.chunk.js",
     "static/media/sakurasou-no-pet-na-kanojo-01_optimized.png": "/animeBDRip/static/media/sakurasou-no-pet-na-kanojo-01_optimized.07ef829780e5088d63ae.png",
@@ -26,12 +26,12 @@
     "static/media/discord.png": "/animeBDRip/static/media/discord.d538ceed682535bb59a6.png",
     "index.html": "/animeBDRip/index.html",
     "static/media/menuHamburguer.svg": "/animeBDRip/static/media/menuHamburguer.d8ddf0e335cdbd800e1dc8ca17f8d1f5.svg",
-    "main.62bd20af.css.map": "/animeBDRip/static/css/main.62bd20af.css.map",
+    "main.a6f582fb.css.map": "/animeBDRip/static/css/main.a6f582fb.css.map",
     "main.e820315c.js.map": "/animeBDRip/static/js/main.e820315c.js.map",
     "787.b611241d.chunk.js.map": "/animeBDRip/static/js/787.b611241d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.62bd20af.css",
+    "static/css/main.a6f582fb.css",
     "static/js/main.e820315c.js"
   ]
 }
