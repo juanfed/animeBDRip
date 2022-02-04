@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/animeBDRip/static/css/main.81f0c03e.css",
-    "main.js": "/animeBDRip/static/js/main.9d48b994.js",
+    "main.css": "/animeBDRip/static/css/main.62bd20af.css",
+    "main.js": "/animeBDRip/static/js/main.261a8e19.js",
     "static/js/787.b611241d.chunk.js": "/animeBDRip/static/js/787.b611241d.chunk.js",
     "static/media/sakurasou-no-pet-na-kanojo-01_optimized.png": "/animeBDRip/static/media/sakurasou-no-pet-na-kanojo-01_optimized.07ef829780e5088d63ae.png",
     "static/media/ano-natsu-de-matteru-01_optimized.jpg": "/animeBDRip/static/media/ano-natsu-de-matteru-01_optimized.a43b75377459b27ed43f.jpg",
@@ -26,12 +26,12 @@
     "static/media/discord.png": "/animeBDRip/static/media/discord.d538ceed682535bb59a6.png",
     "index.html": "/animeBDRip/index.html",
     "static/media/menuHamburguer.svg": "/animeBDRip/static/media/menuHamburguer.d8ddf0e335cdbd800e1dc8ca17f8d1f5.svg",
-    "main.81f0c03e.css.map": "/animeBDRip/static/css/main.81f0c03e.css.map",
-    "main.9d48b994.js.map": "/animeBDRip/static/js/main.9d48b994.js.map",
+    "main.62bd20af.css.map": "/animeBDRip/static/css/main.62bd20af.css.map",
+    "main.261a8e19.js.map": "/animeBDRip/static/js/main.261a8e19.js.map",
     "787.b611241d.chunk.js.map": "/animeBDRip/static/js/787.b611241d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.81f0c03e.css",
-    "static/js/main.9d48b994.js"
+    "static/css/main.62bd20af.css",
+    "static/js/main.261a8e19.js"
   ]
 }
