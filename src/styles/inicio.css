@@ -149,13 +149,13 @@ main{
 	}
 
 	main{
-		padding: 1rem 0rem;
+		padding: 1rem 0vw;
 	}
 
 }
 
 
-@media (max-width:380px){
+@media (max-width:480px){
 	.cards--anime{
 		gap: 1rem .4rem;
 		grid-template-columns: repeat(auto-fill, minmax(135px, 160px));
@@ -177,10 +177,10 @@ main{
 	}
 } */
 
-@media (max-width:360px){
+@media (max-width:361px){
 	.cards--anime{
 		gap: 1rem .4rem;
-		grid-template-columns: repeat(auto-fill, minmax(135px, 165px));
+		grid-template-columns: repeat(auto-fill, minmax(135px, 150px));
 	}
 
 	.card{
