@@ -1,0 +1,31 @@
+const FichaAnime = ({ rutaCI, title, tem, cap, films = "---------", gen, estado = "Finalizado", aud = "Japones", sub = "Español", manga }) => {
+    return (
+        <section class="info">
+            <div class="info__imgPortada">
+                <figure>
+                    <img src={rutaCI} alt={title} /> {/* nombre capeta e imagen */}
+                </figure>
+            </div>
+
+            <div class="info__ficha">
+                <div class="info__ficha--tittle">
+                    <h3>Ficha Tecnica</h3>
+                </div>
+                <div class="info__ficha--datos">
+                    <p><b>Temporadas: </b>{tem}</p>
+                    <p><b>Capitulos: </b>{cap}</p>
+                    <p><b>Peliculas: </b>{films}</p>
+                    <p><b>Género: </b>{gen}</p>
+                    <p><b>Estado: </b>{estado}</p>
+                    <p><b>Duracion: </b> 24min por capítulo</p>
+                    <p><b>Audio: </b>{aud}</p>
+                    <p><b>Subtitulos: </b>{sub}</p>
+                    <p><b>Contraseña: </b>No tiene contraseña</p>
+                    <p><b>Manga: </b>{manga}</p>
+                </div>
+            </div>
+        </section>
+    )
+};
+
+export default FichaAnime;

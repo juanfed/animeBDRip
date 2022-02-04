@@ -21,7 +21,7 @@ const ListAnime = () => {
 
                     <h3 className='lista__animes--title'>A</h3>
                     <div className='listAnime__animes'>
-                        <TitleAnime ruta='#' name="Ano natsu de matteru" />
+                        <TitleAnime ruta='ano-natsu-de-matteru' name="Ano natsu de matteru" />
                         <TitleAnime ruta='#' name="Another" />
                     </div>
 

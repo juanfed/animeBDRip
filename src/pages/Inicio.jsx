@@ -28,7 +28,7 @@ const Inicio = () => {
 				</div>
 
 				<div className="cards--anime">
-					<CardAnime ruta="#" title="Ano natsu de matteru" imagen={Imagenes.anoNatsuDeMatteru} cap="12 + Ova" tem="1" />
+					<CardAnime ruta="listAnime/ano-natsu-de-matteru" title="Ano natsu de matteru" imagen={Imagenes.anoNatsuDeMatteru} cap="12 + Ova" tem="1" />
 					<CardAnime ruta="#" title="Another" imagen={Imagenes.another} cap="12" tem="1 + Ova" />
 					<CardAnime ruta="#" title="Btooom!" imagen={Imagenes.btoom} cap="12" tem="1" />
 					<CardAnime ruta="#" title="Deadman wonderland" imagen={Imagenes.deadmanWonderland} cap="12" tem="1 + Ova" />
