@@ -2,11 +2,9 @@ import React from 'react';
 import FichaAnime from '../../components/FichaAnime';
 import Imagenes from '../../components/Imagenes';  // importo las imagenes para trabajar con ellas mas facilmente
 import FichaSipnosis from '../../components/FichaSipnosis';
-
-import '../../styles/anime.css';
 import FichaDonwload from '../../components/FichaDonwload';
 
-export const AnoNatsuDeMatteru = () => {
+const AnoNatsuDeMatteru = () => {
     return (
         <main>
             <h2>Ano natsu de matteru</h2>
@@ -14,7 +12,11 @@ export const AnoNatsuDeMatteru = () => {
                         title='ano natsu de matteru'
                         tem='1'
                         cap='12'
+                        films='---------'
                         gen='comedia, romance'
+                        estado='Finalizado'
+                        aud='Japones'
+                        sub='Español'
                         manga='3 volumenes'
                         />
 
@@ -25,3 +27,5 @@ export const AnoNatsuDeMatteru = () => {
         </main>
     );
 };
+
+export default AnoNatsuDeMatteru;

@@ -1,4 +1,5 @@
-const FichaAnime = ({ rutaCI, title, tem, cap, films = "---------", gen, estado = "Finalizado", aud = "Japones", sub = "Español", manga }) => {
+import '../styles/anime.css'; // cargará con todo el css de todos los animes
+const FichaAnime = ({ rutaCI, title, tem, cap, films, gen, estado, aud, sub, manga }) => {
     return (
         <section class="info">
             <div class="info__imgPortada">

@@ -22,66 +22,66 @@ const ListAnime = () => {
                     <h3 className='lista__animes--title'>A</h3>
                     <div className='listAnime__animes'>
                         <TitleAnime ruta='ano-natsu-de-matteru' name="Ano natsu de matteru" />
-                        <TitleAnime ruta='#' name="Another" />
+                        <TitleAnime ruta='another' name="Another" />
                     </div>
 
                     <h3 className='lista__animes--title'>B</h3>
                     <div className='listAnime__animes'>
-                        <TitleAnime ruta='#' name="Btoom!" />
+                        <TitleAnime ruta='btoom' name="Btoom!" />
                     </div>
 
                     <h3 className='lista__animes--title'>D</h3>
                     <div className='listAnime__animes'>
-                        <TitleAnime ruta='#' name="Deadman wonderland" />
+                        <TitleAnime ruta='deadman-wonderland' name="Deadman wonderland" />
                     </div>
 
                     <h3 className='lista__animes--title'>G</h3>
                     <div className='listAnime__animes'>
-                        <TitleAnime ruta='#' name="Gangsta" />
-                        <TitleAnime ruta='#' name="Golden time" />
+                        <TitleAnime ruta='gangsta' name="Gangsta" />
+                        <TitleAnime ruta='golden-time' name="Golden time" />
                     </div>
 
                     <h3 className='lista__animes--title'>I</h3>
                     <div className='listAnime__animes'>
-                        <TitleAnime ruta='#' name="Inuyashiki" />
+                        <TitleAnime ruta='inuyashiki' name="Inuyashiki" />
                     </div>
 
                     <h3 className='lista__animes--title'>K</h3>
                     <div className='listAnime__animes'>
-                        <TitleAnime ruta='#' name="Kousetsu no kabaneri" />
+                        <TitleAnime ruta='koutetsu-no-kanaberi' name="Kousetsu no kabaneri" />
                     </div>
 
                     <h3 className='lista__animes--title'>O</h3>
                     <div className='listAnime__animes'>
-                        <TitleAnime ruta='#' name="One punch man" />
-                        <TitleAnime ruta='#' name="Ookami shoujo to kuo ouji" />
+                        <TitleAnime ruta='one-punch-man' name="One punch man" />
+                        <TitleAnime ruta='ookami-shoujo-to-kuro-ouji' name="Ookami shoujo to kuo ouji" />
                     </div>
 
                     <h3 className='lista__animes--title'>P</h3>
                     <div className='listAnime__animes'>
-                        <TitleAnime ruta='#' name="Parasyte" />
+                        <TitleAnime ruta='parasyte' name="Parasyte" />
                     </div>
 
                     <h3 className='lista__animes--title'>R</h3>
                     <div className='listAnime__animes'>
-                        <TitleAnime ruta='#' name="Re Life" />
-                        <TitleAnime ruta='#' name="Re zero" />
+                        <TitleAnime ruta='re-life' name="Re Life" />
+                        <TitleAnime ruta='re-zero' name="Re zero" />
                     </div>
 
                     <h3 className='lista__animes--title'>R</h3>
                     <div className='listAnime__animes'>
-                        <TitleAnime ruta='#' name="Rokka no yuusha" />
+                        <TitleAnime ruta='rokka-no-yuusha' name="Rokka no yuusha" />
                     </div>
 
                     <h3 className='lista__animes--title'>S</h3>
                     <div className='listAnime__animes'>
-                        <TitleAnime ruta='#' name="Sakurasou no Pet na kanojo" />
-                        <TitleAnime ruta='#' name="Subete ga F ni haru" />
+                        <TitleAnime ruta='sukurasou-no-pet-na-kanojo' name="Sakurasou no Pet na kanojo" />
+                        <TitleAnime ruta='subete-ga-f-ni-haru' name="Subete ga F ni haru" />
                     </div>
 
                     <h3 className='lista__animes--title'>Y</h3>
                     <div className='listAnime__animes'>
-                        <TitleAnime ruta='#' name="Youjo senki" />
+                        <TitleAnime ruta='youjo-senki' name="Youjo senki" />
                     </div>
                 </section>
 
