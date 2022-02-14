@@ -21,7 +21,7 @@ const Header = () => {
 					<Link to="/animeBDRip">Inicio</Link>
 					<Link to="listAnime">Lista Animes</Link>
 					<Link to="#">Manga</Link>
-					<Link to="#">Peliculas</Link>
+					<Link to="listFilms">Peliculas</Link>
 					<Link to="#">Contacto</Link>
 
 

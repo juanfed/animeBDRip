@@ -1,0 +1,26 @@
+.listFilms--letter{
+    text-align: center;
+    color: red;
+    font-size: 3.5rem;
+}
+
+.lisFilms__card{
+    width: 400px;
+    height: 600px;
+    border: 2px solid rebeccapurple;
+}
+
+.lisFilms__card--div{
+    display: flex;
+	justify-content: center;
+}
+
+.lisFilms__card--figure{
+    height: 300px;
+    width: 300px;
+    border: 2px solid red;
+}
+.lisFilms__card--figure img{
+    width: 100%;
+    height: 100%;
+}

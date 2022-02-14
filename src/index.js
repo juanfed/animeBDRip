@@ -25,6 +25,7 @@ import RokkaNoYuusha from './pages/lista_animes/RokkaNoYuusha';
 import SakurasouNoPetNaKanojo from './pages/lista_animes/SakurasouNoPetNaKanojo';
 import SubeteGaFNiharu from './pages/lista_animes/SubeteGaFNiHaru';
 import YoujoSenki from './pages/lista_animes/YoujoSenki';
+import ListFilms from './pages/ListFilms';
 
 
 ReactDOM.render(
@@ -33,23 +34,27 @@ ReactDOM.render(
       <Route path="/animeBDRip" element={<App />} >
       <Route index element={<Inicio />} />  {/* No coloco un path para que me lo cargue por defecto */}
         <Route path="listAnime" element={<ListAnime />} />
-        <Route path='listAnime/ano-natsu-de-matteru' element={<AnoNatsuDeMatteru />} />
-        <Route path='listAnime/another' element={<Another />} />
-        <Route path='listAnime/btoom' element={<Btoom />} />
-        <Route path='listAnime/deadman-wonderland' element={<DeadmanWonderland />} />
-        <Route path='listAnime/gangsta' element={<Gangsta />} />
-        <Route path='listAnime/golden-time' element={<GoldenTime />} />
-        <Route path='listAnime/inuyashiki' element={<Inuyashiki />} />
-        <Route path='listAnime/koutetsu-no-kanaberi' element={<KoutetsuNoKabaneri />} />
-        <Route path='listAnime/one-punch-man' element={<OnePunchMan />} /> 
-        <Route path='listAnime/ookami-shoujo-to-kuro-ouji' element={<OokamiShoujoToKuroOuji /> } />
-        <Route path='listAnime/parasyte' element={<Parasyte /> } />
-        <Route path='listAnime/re-life' element={<ReLife />} />
-        <Route path='listAnime/re-zero' element={<ReZero />} />
-        <Route path='listAnime/rokka-no-yuusha' element={<RokkaNoYuusha />} />
-        <Route path='listAnime/sukurasou-no-pet-na-kanojo' element={<SakurasouNoPetNaKanojo />} />
-        <Route path='listAnime/subete-ga-f-ni-haru' element={<SubeteGaFNiharu />} />
-        <Route path='listAnime/youjo-senki' element={<YoujoSenki />} />
+          <Route path='listAnime/ano-natsu-de-matteru' element={<AnoNatsuDeMatteru />} />
+          <Route path='listAnime/another' element={<Another />} />
+          <Route path='listAnime/btoom' element={<Btoom />} />
+          <Route path='listAnime/deadman-wonderland' element={<DeadmanWonderland />} />
+          <Route path='listAnime/gangsta' element={<Gangsta />} />
+          <Route path='listAnime/golden-time' element={<GoldenTime />} />
+          <Route path='listAnime/inuyashiki' element={<Inuyashiki />} />
+          <Route path='listAnime/koutetsu-no-kanaberi' element={<KoutetsuNoKabaneri />} />
+          <Route path='listAnime/one-punch-man' element={<OnePunchMan />} /> 
+          <Route path='listAnime/ookami-shoujo-to-kuro-ouji' element={<OokamiShoujoToKuroOuji /> } />
+          <Route path='listAnime/parasyte' element={<Parasyte /> } />
+          <Route path='listAnime/re-life' element={<ReLife />} />
+          <Route path='listAnime/re-zero' element={<ReZero />} />
+          <Route path='listAnime/rokka-no-yuusha' element={<RokkaNoYuusha />} />
+          <Route path='listAnime/sukurasou-no-pet-na-kanojo' element={<SakurasouNoPetNaKanojo />} />
+          <Route path='listAnime/subete-ga-f-ni-haru' element={<SubeteGaFNiharu />} />
+          <Route path='listAnime/youjo-senki' element={<YoujoSenki />} />
+
+          {/* Ruta para las peliculas */}
+
+        <Route path='listFilms' element={<ListFilms />} />
       </Route>
     </Routes>
   </Router>,
