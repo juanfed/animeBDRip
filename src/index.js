@@ -26,6 +26,7 @@ import SakurasouNoPetNaKanojo from './pages/lista_animes/SakurasouNoPetNaKanojo'
 import SubeteGaFNiharu from './pages/lista_animes/SubeteGaFNiHaru';
 import YoujoSenki from './pages/lista_animes/YoujoSenki';
 import ListFilms from './pages/ListFilms';
+import PageNoFound from './pages/PageNoFound';
 
 
 ReactDOM.render(
@@ -56,6 +57,7 @@ ReactDOM.render(
 
         <Route path='listFilms' element={<ListFilms />} />
       </Route>
+        <Route path='*' element={<PageNoFound />} />
     </Routes>
   </Router>,
   document.getElementById('root')
