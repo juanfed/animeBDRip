@@ -3,8 +3,8 @@ import Logos from './Logos';
 
 const FichaDonwload = () => {
     return (
-        <section class="donwload">
-            <div class="donwload__table">
+        <section className="donwload">
+            <div className="donwload__table">
                 <table>
                     <thead>
                         <tr>
@@ -36,26 +36,26 @@ const FichaDonwload = () => {
                     </tbody>
                 </table>
             </div>
-            <div class="donwload__enlaces">
-                <div class="donwload__enlaces--tittle">
+            <div className="donwload__enlaces">
+                <div className="donwload__enlaces--tittle">
                     <h2>Enlaces</h2>
                 </div>
 
-                <div class="donwload__enlaces--link">
+                <div className="donwload__enlaces--link">
                     <h3>Mega</h3>
                     <figure>
                         <img src={Logos.mega} alt="Mega" />
                     </figure>
                 </div>
 
-                <div class="donwload__enlaces--link">
+                <div className="donwload__enlaces--link">
                     <h3>Mediafire</h3>
                     <figure>
                         <img src={Logos.mediafire} alt="Mediafire" />
                     </figure>
                 </div>
 
-                <div class="donwload__enlaces--link">
+                <div className="donwload__enlaces--link">
                     <h3>Drive</h3>
                     <figure>
                         <img src={Logos.drive} alt="Drive" />

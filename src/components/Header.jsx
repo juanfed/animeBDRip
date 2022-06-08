@@ -13,7 +13,7 @@ const Header = () => {
 					<h1 className="nav__logo"><Link to="/animeBDRip" id="tittle">AnimeBDRip</Link></h1>
 
 					{/* Aca irá el icono para desplegar el menu en dispositivos moviles */}
-					<label for="menu" className="nav__label">
+					<label htmlFor="menu" className="nav__label">
 						<img src={hamburger} alt="menu" className="nav__img" />
 					</label>
 					<input type="checkbox" id="menu" className="nav__input" />
