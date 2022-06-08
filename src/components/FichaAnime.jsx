@@ -1,18 +1,18 @@
 import '../styles/anime.css'; // cargará con todo el css de todos los animes
 const FichaAnime = ({ rutaCI, title, tem, cap, films, gen, estado, aud, sub, manga }) => {
     return (
-        <section class="info">
-            <div class="info__imgPortada">
+        <section className="info">
+            <div className="info__imgPortada">
                 <figure>
                     <img src={rutaCI} alt={title} /> {/* nombre capeta e imagen */}
                 </figure>
             </div>
 
-            <div class="info__ficha">
-                <div class="info__ficha--tittle">
+            <div className="info__ficha">
+                <div className="info__ficha--tittle">
                     <h3>Ficha Tecnica</h3>
                 </div>
-                <div class="info__ficha--datos">
+                <div className="info__ficha--datos">
                     <p><b>Temporadas: </b>{tem}</p>
                     <p><b>Capitulos: </b>{cap}</p>
                     <p><b>Peliculas: </b>{films}</p>
