@@ -7,7 +7,7 @@ import FichaDonwload from '../../components/FichaDonwload';
 const KoutetsuNoKabaneri= () => {
     return (
         <main>
-            <h2>Ano natsu de matteru</h2>
+            <h2>koutetsu no kanaberi</h2>
             <FichaAnime rutaCI={Imagenes.kousetsuNoKabaneri}
                 title='Koutetsu No Kabaneri'
                 tem='1'

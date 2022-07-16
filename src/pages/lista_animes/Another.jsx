@@ -9,7 +9,7 @@ import FichaDonwload from '../../components/FichaDonwload';
 const Another = () => {
     return (
         <main>
-            <h2>Ano natsu de matteru</h2>
+            <h2>Another</h2>
             <FichaAnime rutaCI={Imagenes.another}
                 title='Another'
                 tem='1'

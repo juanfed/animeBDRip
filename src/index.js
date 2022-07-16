@@ -29,6 +29,11 @@ import ListFilms from './pages/ListFilms';
 import PageNoFound from './pages/PageNoFound';
 
 
+// Lista de todas las peliculas
+import ArrietyEnElMundoDeLosDiminutos from './pages/lista_peliculas/ArrietyEnElMundoDeLosDiminutos';
+
+
+
 ReactDOM.render(
   <Router>
     <Routes>
@@ -56,6 +61,7 @@ ReactDOM.render(
           {/* Ruta para las peliculas */}
 
         <Route path='listFilms' element={<ListFilms />} />
+          <Route path='listFilms/ArrietyEnElMundoDeLosDiminutos' element={<ArrietyEnElMundoDeLosDiminutos />} />
       </Route>
         <Route path='*' element={<PageNoFound />} />
     </Routes>
