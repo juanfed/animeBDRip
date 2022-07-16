@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/animeBDRip/static/css/main.be890a35.css",
-    "main.js": "/animeBDRip/static/js/main.58c30678.js",
+    "main.js": "/animeBDRip/static/js/main.a2b8829a.js",
     "static/js/787.b611241d.chunk.js": "/animeBDRip/static/js/787.b611241d.chunk.js",
+    "static/media/arrietty.jpg": "/animeBDRip/static/media/arrietty.db6a555d250d4cea318c.jpg",
     "static/media/sakurasou-no-pet-na-kanojo-01_optimized.png": "/animeBDRip/static/media/sakurasou-no-pet-na-kanojo-01_optimized.07ef829780e5088d63ae.png",
     "static/media/ano-natsu-de-matteru-01_optimized.jpg": "/animeBDRip/static/media/ano-natsu-de-matteru-01_optimized.a43b75377459b27ed43f.jpg",
     "static/media/ookami-shoujo-to-kuro-ouji-01_optimized.jpg": "/animeBDRip/static/media/ookami-shoujo-to-kuro-ouji-01_optimized.54223fe462db86618b45.jpg",
@@ -27,11 +28,11 @@
     "index.html": "/animeBDRip/index.html",
     "static/media/menuHamburguer.svg": "/animeBDRip/static/media/menuHamburguer.d8ddf0e335cdbd800e1dc8ca17f8d1f5.svg",
     "main.be890a35.css.map": "/animeBDRip/static/css/main.be890a35.css.map",
-    "main.58c30678.js.map": "/animeBDRip/static/js/main.58c30678.js.map",
+    "main.a2b8829a.js.map": "/animeBDRip/static/js/main.a2b8829a.js.map",
     "787.b611241d.chunk.js.map": "/animeBDRip/static/js/787.b611241d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.be890a35.css",
-    "static/js/main.58c30678.js"
+    "static/js/main.a2b8829a.js"
   ]
 }
