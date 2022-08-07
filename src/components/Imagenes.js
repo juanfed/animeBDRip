@@ -20,21 +20,21 @@ import youjoSenki from '../images/images-Anime/youjo-senki/youjo-senki-01_optimi
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-    another,
-    anoNatsuDeMatteru,
-    btoom,
-    deadmanWonderland,
-    gangsta,
-    goldenTime,
-    inuyashiki,
-    kousetsuNoKabaneri,
-    onePunchMan,
-    ookamiShoujoToKuroOuji,
-    parasyte,
-    reLife,
-    reZero,
-    rokkaNoYuusha,
-    sakurasouNoPetNaKanojo,
-    subeteGaFNiHaru,
-    youjoSenki
+	another,
+	anoNatsuDeMatteru,
+	btoom,
+	deadmanWonderland,
+	gangsta,
+	goldenTime,
+	inuyashiki,
+	kousetsuNoKabaneri,
+	onePunchMan,
+	ookamiShoujoToKuroOuji,
+	parasyte,
+	reLife,
+	reZero,
+	rokkaNoYuusha,
+	sakurasouNoPetNaKanojo,
+	subeteGaFNiHaru,
+	youjoSenki
 }

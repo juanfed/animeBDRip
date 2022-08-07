@@ -8,11 +8,11 @@ import twitter from '../assets/twitter.png';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-    animebdrip,
-    discord,
-    drive,
-    facebook,
-    mediafire,
-    mega,
-    twitter
+	animebdrip,
+	discord,
+	drive,
+	facebook,
+	mediafire,
+	mega,
+	twitter
 } 
