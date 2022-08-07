@@ -8,7 +8,7 @@ const AnoNatsuDeMatteru = () => {
 	return (
 		<main>
 			<h2>Ano natsu de matteru</h2>
-			<FichaAnime rutaCI={Imagenes.anoNatsuDeMatteru}
+			<FichaAnime RutaImagen={Imagenes.anoNatsuDeMatteru}
 				title='ano natsu de matteru'
 				tem='1'
 				cap='12'
