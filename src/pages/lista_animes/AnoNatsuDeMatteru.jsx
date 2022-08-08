@@ -1,27 +1,50 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import FichaAnime from '../../components/FichaAnime';
 import Imagenes from '../../components/Imagenes';  // importo las imagenes para trabajar con ellas mas facilmente
 import FichaSipnosis from '../../components/FichaSipnosis';
 import FichaDonwload from '../../components/FichaDonwload';
 
 const AnoNatsuDeMatteru = () => {
+	const [resultado, setResultado] = useState({})
+
+	let nombre = "Ano natsu de matteru"
+
+	useEffect(() => {
+		const dataAnime = { method: 'GET', url: `http://localhost:8080/animeBDRip/listAnime/another/${nombre}`};
+
+		axios.request(dataAnime).then(function (response) {
+			console.log(response.data);
+			setResultado(response.data);
+		}).catch(function (error) {
+			console.error(error);
+		});
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [])
+
 	return (
 		<main>
 			<h2>Ano natsu de matteru</h2>
-			<FichaAnime RutaImagen={Imagenes.anoNatsuDeMatteru}
-				title='ano natsu de matteru'
-				tem='1'
-				cap='12'
-				films='---------'
-				gen='comedia, romance'
-				estado='Finalizado'
-				aud='Japones'
-				sub='Español'
-				manga='3 volumenes'
+			<FichaAnime
+				RutaImagen={Imagenes.anoNatsuDeMatteru}
+				Name={resultado.name}
+				Seasons={resultado.seasons}
+				Chapters={resultado.chapters}
+				Specials={resultado.specials}
+				Movies={resultado.movies}
+				Gender={resultado.gender}
+				StartDate={resultado.start_date}
+				EndDate={resultado.end_date}
+				State={resultado.state}
+				Duration={resultado.duration}
+				Audio={resultado.audio}
+				Subtitle={resultado.subtitle}
+				Password={resultado.password}
+				Manga={resultado.manga}
 			/>
 
-			<FichaSipnosis sipnosis="Mientras Kaito Kirishima probaba su cámara de 8 mm en la noche, este queda atrapado en medio de una misteriosa explosión que termina matándolo. Extrañamente, Kaito despierta al día siguiente perfectamente bien, pero sin ningún recuerdo de lo que ocurrió exactamente el día anterior. Sin prestar atención de lo que había sucedido, se dirige a la escuela sin pensar sobre dicho accidente. Conversando con sus amigos en la escuela, deciden hacer una película durante las vacaciones de verano, e invitan a dos estudiantes de cursos superiores para participar en el proyecto: la recién llegada Ichika Takatsuki y la extraña Lemon Yamano. En un extraño giro del destino, Ichika comienza a vivir con Kaito, ya que su hermana debe viajar a Bolivia para trabajar. Sin embargo, Ichika no es una chica normal, no procede de este planeta y oculta su identidad haciéndose pasar por una chica que es del extranjero que ha decidido estudiar en Japón."
-			/>
+			<FichaSipnosis
+				sipnosis={resultado.sipnosis} />
 
 			<FichaDonwload />
 		</main>

@@ -21,7 +21,7 @@ const Another = () => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
-	
+
 
 	return (
 		<main>
@@ -42,10 +42,11 @@ const Another = () => {
 				Subtitle={resultado.subtitle}
 				Password={resultado.password}
 				Manga={resultado.manga}
-				/>
+			/>
 
 
-			<FichaSipnosis sipnosis={resultado.sipnosis}/>
+			<FichaSipnosis
+				sipnosis={resultado.sipnosis} />
 
 			<FichaDonwload />
 		</main>
