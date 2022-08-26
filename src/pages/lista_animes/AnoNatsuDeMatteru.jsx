@@ -11,7 +11,7 @@ const AnoNatsuDeMatteru = () => {
 	let nombre = "Ano natsu de matteru"
 
 	useEffect(() => {
-		const dataAnime = { method: 'GET', url: `http://localhost:8080/animeBDRip/listAnime/another/${nombre}`};
+		const dataAnime = { method: 'GET', url: `http://localhost:8080/animeBDRip/listAnime/${nombre}`};
 
 		axios.request(dataAnime).then(function (response) {
 			console.log(response.data);

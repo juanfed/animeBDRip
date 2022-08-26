@@ -1,33 +1,42 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import FichaAnime from '../../components/FichaAnime';
-import Imagenes from '../../components/Imagenes';  // importo las imagenes para trabajar con ellas mas facilmente
+//import Imagenes from '../../components/Imagenes';  // importo las imagenes para trabajar con ellas mas facilmente
 import FichaSipnosis from '../../components/FichaSipnosis';
 
 import FichaDonwload from '../../components/FichaDonwload';
 
+// import styles css
+import "../../styles/another.css"
+
 const Another = () => {
 	const [resultado, setResultado] = useState({})
+	const [photos, setPhotos] = useState([])
 
 	useEffect(() => {
-		const dataAnime = { method: 'GET', url: 'http://localhost:8080/animeBDRip/listAnime/another/Another' };
-
+		const dataAnime = { method: 'GET', url: 'http://localhost:8080/animeBDRip/listAnime/Another' };
+		
 		axios.request(dataAnime).then(function (response) {
-			console.log(response.data);
 			setResultado(response.data);
 		}).catch(function (error) {
 			console.error(error);
+		}).then(()=> {
+			const dataAnimePhoto = { method: 'GET', url: `http://localhost:8080/animeBDRip/listAnime/anime/1` };
+			axios.request(dataAnimePhoto).then(function (response) {
+				setPhotos(response.data.enlaces.split(","))
+				console.log(photos)
+			})
 		});
+
+		
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
-
-
 
 	return (
 		<main>
 			<h2>{resultado.name}</h2>
 			<FichaAnime
-				RutaImagen={Imagenes.another}
+				RutaImagen={resultado.photos}
 				Name={resultado.name}
 				Seasons={resultado.seasons}
 				Chapters={resultado.chapters}
@@ -44,11 +53,24 @@ const Another = () => {
 				Manga={resultado.manga}
 			/>
 
+			<section className="sectionImagesAnime">
+				<h3>Imagenes</h3>
+				{photos.map((photo) => (
+					<div className="divSectionImagesAnime">
+						<figure className="figureSectionImagesAnime">
+							<img className="imgSectionImagesAnime" src={photo} alt="" key={photo} />
+						</figure>
+					</div>
+				))}
+			</section>
+			<br/>
 
 			<FichaSipnosis
 				sipnosis={resultado.sipnosis} />
 
 			<FichaDonwload />
+
+			
 		</main>
 	);
 };
