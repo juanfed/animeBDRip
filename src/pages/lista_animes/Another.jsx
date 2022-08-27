@@ -8,6 +8,7 @@ import FichaDonwload from '../../components/FichaDonwload';
 
 // import styles css
 import "../../styles/another.css"
+import GaleryImagesAnime from '../../components/GaleryImagesAnime';
 
 const Another = () => {
 	const [resultado, setResultado] = useState({})
@@ -15,12 +16,12 @@ const Another = () => {
 
 	useEffect(() => {
 		const dataAnime = { method: 'GET', url: 'http://localhost:8080/animeBDRip/listAnime/Another' };
-		
+
 		axios.request(dataAnime).then(function (response) {
 			setResultado(response.data);
 		}).catch(function (error) {
 			console.error(error);
-		}).then(()=> {
+		}).then(() => {
 			const dataAnimePhoto = { method: 'GET', url: `http://localhost:8080/animeBDRip/listAnime/anime/1` };
 			axios.request(dataAnimePhoto).then(function (response) {
 				setPhotos(response.data.enlaces.split(","))
@@ -28,7 +29,7 @@ const Another = () => {
 			})
 		});
 
-		
+
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
@@ -53,24 +54,14 @@ const Another = () => {
 				Manga={resultado.manga}
 			/>
 
-			<section className="sectionImagesAnime">
-				<h3>Imagenes</h3>
-				{photos.map((photo) => (
-					<div className="divSectionImagesAnime">
-						<figure className="figureSectionImagesAnime">
-							<img className="imgSectionImagesAnime" src={photo} alt="" key={photo} />
-						</figure>
-					</div>
-				))}
-			</section>
-			<br/>
+			<GaleryImagesAnime />
 
 			<FichaSipnosis
 				sipnosis={resultado.sipnosis} />
 
 			<FichaDonwload />
 
-			
+
 		</main>
 	);
 };

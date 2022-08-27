@@ -1,5 +1,5 @@
 import '../styles/anime.css'; // cargará con todo el css de todos los animes
-const FichaAnime = ({ 
+const FichaAnime = ({
 	RutaImagen,
 	Name,
 	Seasons,
