@@ -5,7 +5,6 @@
 .nav{
 	background-color: red;
 	height: 4.8rem;
-	color: #ededed; /*Color al titulo de la pagina */
 }
 
 .nav__container h1 a{
