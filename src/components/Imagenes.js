@@ -17,8 +17,6 @@ import sakurasouNoPetNaKanojo from '../images/images-Anime/sakurasou-no-Pet-na-K
 import subeteGaFNiHaru from '../images/images-Anime/subete-ga-F-ni-haru/subete-ga-f-ni-haru-01_optimized.jpg';
 import youjoSenki from '../images/images-Anime/youjo-senki/youjo-senki-01_optimized.jpg';
 
-
-// eslint-disable-next-line import/no-anonymous-default-export
 export default {
 	another,
 	anoNatsuDeMatteru,

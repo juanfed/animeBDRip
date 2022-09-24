@@ -1,5 +1,5 @@
-:root{
-    /*Fondo de los elementos
+:root {
+	/*Fondo de los elementos
     #686D76;
     #48cae8;
     #d9d9d9; un poco mas oscuro que el ededed
@@ -8,115 +8,116 @@
     #1c6fad; azul un poco mas claro
     #343a40; gris oscuro
     */
-    --primer: #00000;
-    --segundo: #ffff;
-    --tercero: #ededed;
-    --tittle: rgb(255, 0, 0);
+	--primer: #00000;
+	--segundo: #ffff;
+	--tercero: #ededed;
+	--tittle: rgb(255, 0, 0);
 }
 
-body{
-    background-color: #ededed;
+body {
+	background-color: #ededed;
 }
 
-main{
-    padding: 2rem 2rem;
-    margin: 1% 10%;
-    background-color: var(--tercero);
-    box-shadow: 1px 1px 4px 1px #343a40;
+main {
+	padding: 2rem 2rem;
+	margin: 1% 10%;
+	background-color: var(--tercero);
+	box-shadow: 1px 1px 4px 1px #343a40;
 }
-.listAnime{
-    text-align: center;
-    font-size: 2rem;
+
+.listAnime {
+	text-align: center;
+	font-size: 2rem;
 }
 
 /*Estilos para los titulos de las letras de cada seccion*/
 
-.lista__animes--title{
-    color: red;
-    font-size: 4rem;
+.lista__animes--title {
+	color: red;
+	font-size: 4rem;
 }
 
 /*Estilos de las listas de los animes*/
 
-.listAnime__animes li{
-    margin: .1rem 20rem;
-    border-radius: 8px;
-    padding: .2rem 0rem;
-    display: flex;
+.listAnime__animes li {
+	margin: .1rem 20rem;
+	border-radius: 8px;
+	padding: .2rem 0rem;
+	display: flex;
 }
 
-.listAnime__animes a{
-    color: var(--primer);
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin: 0 auto;
+.listAnime__animes a {
+	color: var(--primer);
+	font-weight: 600;
+	font-size: 1.1rem;
+	margin: 0 auto;
 }
 
 .listAnime__animes li:hover {
-    background-color: #343a40;
-    color: var(--segundo);
-    cursor: pointer;
+	background-color: #343a40;
+	color: var(--segundo);
+	cursor: pointer;
 }
 
 /*Parte del responsive designe*/
 
-@media (max-width:1650px){
+@media (max-width:1650px) {
 
-    .listAnime__animes li{
-        margin: .1rem 10rem;
-    }
+	.listAnime__animes li {
+		margin: .1rem 10rem;
+	}
 }
 
 @media (max-width:1250px) {
 
-    main{
-        margin: 1% 5%;
-    }
+	main {
+		margin: 1% 5%;
+	}
 }
 
-@media (max-width:1130px){
+@media (max-width:1130px) {
 
-    main{
-        margin: 1% 0%;
-    }
+	main {
+		margin: 1% 0%;
+	}
 }
 
 
 @media (max-width:1050px) {
-    
-    .listAnime__animes li{
-        margin: .1rem 7rem;
-    }
+
+	.listAnime__animes li {
+		margin: .1rem 7rem;
+	}
 }
 
 @media (max-width:830px) {
-    
-    .listAnime__animes li{
-        margin: .1rem 3rem;
-    }
+
+	.listAnime__animes li {
+		margin: .1rem 3rem;
+	}
 }
 
 @media (max-width:650px) {
-    
-    .listAnime__animes li{
-        margin: .1rem 1rem;
-    }
+
+	.listAnime__animes li {
+		margin: .1rem 1rem;
+	}
 }
 
 @media (max-width:500px) {
-    
-    .listAnime__animes li{
-        margin: .1rem 0rem;
-    }
 
-    .listAnime__animes a{
-        font-size: 1rem;
-    }
+	.listAnime__animes li {
+		margin: .1rem 0rem;
+	}
+
+	.listAnime__animes a {
+		font-size: 1rem;
+	}
 }
 
 @media (max-width:375px) {
-    
-    main{
-        padding: 2rem 1rem;
-    }
+
+	main {
+		padding: 2rem 1rem;
+	}
 }

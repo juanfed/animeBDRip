@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom" // version 6
 import Inicio from './pages/Inicio';
@@ -28,11 +27,8 @@ import YoujoSenki from './pages/lista_animes/YoujoSenki';
 import ListFilms from './pages/ListFilms';
 import PageNoFound from './pages/PageNoFound';
 
-
 // Lista de todas las peliculas
 import ArrietyEnElMundoDeLosDiminutos from './pages/lista_peliculas/ArrietyEnElMundoDeLosDiminutos';
-
-
 
 ReactDOM.render(
   <Router>
@@ -68,4 +64,3 @@ ReactDOM.render(
   </Router>,
   document.getElementById('root')
 );
-reportWebVitals();

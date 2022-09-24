@@ -1,6 +1,6 @@
 /* estilos al main de la pagina */
 
-main{
+main {
 	background-color: #ededed;
 	padding: 1rem 3vw;
 	/* border: 2px solid black; */
@@ -9,26 +9,27 @@ main{
 
 /*Estilos de la caja que contiene las cards de los animes*/
 /* Estilos del intro de la pagina */
-.intro{
+.intro {
 	margin: 0rem 2rem;
 	padding-bottom: 2rem;
 }
 
-.cards--anime{
+.cards--anime {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(160px, 200px));
 	justify-content: center;
 	align-items: center;
-	text-align: center; /*centro las letras de cada card*/
+	text-align: center;
+	/*centro las letras de cada card*/
 	gap: 1.2rem 1.2rem;
 }
 
-.cards--anime a{
+.cards--anime a {
 	color: black;
 }
 
 /*para que las imagenes no se me desborden de manera presipitada*/
-.card{
+.card {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -39,39 +40,40 @@ main{
 	box-shadow: 0px 0px 4px 1px silver;
 }
 
-.card:hover{
+.card:hover {
 	cursor: pointer;
 	transform: scale(1.18, 1.08);
-	background-color: #ededed; /* Para que no quede trasparente */
+	background-color: #ededed;
+	/* Para que no quede trasparente */
 }
 
-.card__tittle{
+.card__tittle {
 	height: 45px;
 }
 
-.card__tittle{
+.card__tittle {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.card__img{
+.card__img {
 	display: flex;
 	justify-content: center;
 }
 
-.card__img--figure{
+.card__img--figure {
 	width: 180px;
 	height: 260px;
 }
 
-.card__img--figure img{
+.card__img--figure img {
 	width: 100%;
 	height: 100%;
 }
 
 
-.intro__h1{
+.intro__h1 {
 	text-align: center;
 	padding: 1.8rem 0rem;
 	font-size: 1.5rem;
@@ -79,9 +81,9 @@ main{
 	text-decoration: underline red;
 }
 
-				/* Estilos de la seccion de anime */
+/* Estilos de la seccion de anime */
 
-.anime__tittle{
+.anime__tittle {
 	padding: 1rem 0rem;
 	margin-bottom: 1rem;
 	color: red;
@@ -96,75 +98,76 @@ main{
 
 
 /* Estilos de la secciones de nuevos animes */
-.newAnimes{
+.newAnimes {
 	padding: 2rem 0rem;
 	text-align: center;
 }
 
-.newAnimes__tittle{
+.newAnimes__tittle {
 	padding: 1rem 0rem;
 }
 
-.newAnimes__list h4{
+.newAnimes__list h4 {
 	margin: .5rem 0rem;
 }
 
 /* acomodar el main para pantallas mas chicas */
 
-@media (max-width:800px){
-	.card{
+@media (max-width:800px) {
+	.card {
 		height: 325px;
 	}
 
-	.card:hover{
+	.card:hover {
 		transform: none;
 	}
 
-	.cards--anime{
+	.cards--anime {
 		gap: 1rem .5rem;
 		grid-template-columns: repeat(auto-fill, minmax(150px, 185px));
 	}
 
-	.card__tittle{
+	.card__tittle {
 		height: 35px;
 	}
 
-	.card__tittle h3{
+	.card__tittle h3 {
 		font-size: .9rem;
 	}
 
-	.card__information p{
+	.card__information p {
 		font-size: .7rem;
 	}
 
-	.card__img--figure{
+	.card__img--figure {
 		width: 200px;
 		height: 260px;
 	}
 
 
 
-	.intro{
+	.intro {
 		margin: 0 .5rem;
 	}
 
-	main{
+	main {
 		padding: 1rem 0vw;
 	}
 
 }
 
 
-@media (max-width:480px){
-	.cards--anime{
+@media (max-width:480px) {
+	.cards--anime {
 		gap: 1rem .4rem;
 		grid-template-columns: repeat(auto-fill, minmax(135px, 160px));
 	}
-	.card{
+
+	.card {
 		height: 295px;
 	}
 
-	.card__img--figure{
+	.card__img--figure {
 		width: 200px;
 		height: 230px;
 	}
@@ -177,24 +180,24 @@ main{
 	}
 } */
 
-@media (max-width:361px){
-	.cards--anime{
+@media (max-width:361px) {
+	.cards--anime {
 		gap: 1rem .4rem;
 		grid-template-columns: repeat(auto-fill, minmax(135px, 150px));
 	}
 
-	.card{
+	.card {
 		height: 325px;
 	}
 
-	.card__img--figure{
+	.card__img--figure {
 		width: 200px;
 		height: 260px;
 	}
 }
 
-@media (max-width:340px){
-	.cards--anime{
+@media (max-width:340px) {
+	.cards--anime {
 		grid-template-columns: repeat(auto-fill, minmax(135px, 200px));
 	}
 }

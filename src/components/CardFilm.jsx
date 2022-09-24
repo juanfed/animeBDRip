@@ -9,8 +9,6 @@ const CardFilm = (title, img) => {
 			</figure>
 		</div>
 	);
-
-
 };
 
 export default CardFilm;
