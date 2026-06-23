@@ -1,33 +1,31 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 const CardAnime = ({ ruta, title, imagen, cap, tem }) => {
   return (
-    <div className="card">
+    <Link to={ruta} className="card">
       <div className="card__tittle">
-        <h3>
-          <Link to={ruta}>{title}</Link>
-        </h3>
+        <h3>{title}</h3>
       </div>
 
       <div className="card__img">
         <figure className="card__img--figure">
-          <img loading="lazy" src={imagen} alt={title} />
+          <img
+            loading="lazy"
+            decoding="async"
+            width="180"
+            height="260"
+            src={imagen}
+            alt={`Portada de ${title}`}
+          />
         </figure>
       </div>
 
       <div className="card__information">
-        <p>
-          <b>Capitulos: </b>
-          {cap}
-        </p>
-        <p>
-          <b>Temporadas: </b>
-          {tem}
-        </p>
+        <p><b>Capítulos: </b>{cap}</p>
+        <p><b>Temporadas: </b>{tem}</p>
       </div>
-    </div>
-  );
-};
+    </Link>
+  )
+}
 
-export default CardAnime;
+export default CardAnime

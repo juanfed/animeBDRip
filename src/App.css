@@ -1,7 +1,2 @@
-*{
-  border: 0;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
+/* El reset y los estilos globales viven en src/index.css.
+   Este archivo queda para estilos específicos del layout de la app. */

@@ -1,0 +1,29 @@
+.notFound {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+}
+
+.notFound__code {
+  font-size: clamp(4rem, 20vw, 8rem);
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.notFound__text {
+  font-size: 1.2rem;
+  margin: var(--space-md) 0 var(--space-lg);
+}
+
+.notFound__link {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-md);
+  background-color: var(--color-primary);
+  color: var(--color-text-invert);
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.notFound__link:hover {
+  opacity: 0.85;
+}

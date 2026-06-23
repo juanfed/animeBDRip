@@ -1,48 +1,63 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom"; // hace la funcion de un <a></a> de html
+import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 
-import hamburger from "./../assets/menuHamburguer.svg"; // importo el svg del menu de navegacion
+import hamburger from '../assets/menuHamburguer.svg'
 
-import "../styles/header.css";
+import '../styles/header.css'
 
 const Header = () => {
-  // eslint-disable-next-line no-unused-vars
-  const [userLogin, setUserLogin] = useState(false);
+  const [open, setOpen] = useState(false)
+  const [hidden, setHidden] = useState(false)
+  const lastY = useRef(0)
+
+  // Oculta el header al bajar y lo muestra al subir un poco.
+  useEffect(() => {
+    const onScroll = () => {
+      const y = window.scrollY
+      if (y > lastY.current && y > 80) {
+        setHidden(true) // bajando
+      } else {
+        setHidden(false) // subiendo
+      }
+      lastY.current = y
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  const closeMenu = () => setOpen(false)
+
   return (
     <header>
-      <nav className="nav">
+      {/* Si el menú está abierto no lo escondemos aunque se baje */}
+      <nav className={`nav ${hidden && !open ? 'nav--hidden' : ''}`}>
         <div className="nav__container">
           <h1 className="nav__logo">
-            <Link to="/animeBDRip" id="tittle">
+            <Link to="/" id="tittle" onClick={closeMenu}>
               AnimeBDRip
             </Link>
           </h1>
 
-					{/* Aca irá el icono para desplegar el menu en dispositivos moviles */}
-					<label htmlFor="menu" className="nav__label">
-						<img src={hamburger} alt="menu" className="nav__img" />
-					</label>
-					<input type="checkbox" id="menu" className="nav__input" />
+          {/* Botón hamburguesa (solo móvil) */}
+          <button
+            type="button"
+            className="nav__label"
+            aria-label="Abrir menú de navegación"
+            aria-expanded={open}
+            onClick={() => setOpen((o) => !o)}
+          >
+            <img src={hamburger} alt="" aria-hidden="true" className="nav__img" />
+          </button>
 
-          <div className="nav__menu">
-            <Link to="/animeBDRip">Inicio</Link>
-            <Link to="listAnime">Lista Animes</Link>
-            <Link to="#">Manga</Link>
-            <Link to="listFilms">Peliculas</Link>
-            <Link to="#">Contacto</Link>
-
-            {userLogin ? null : (
-              <>
-                <Link to="#">Ingresar</Link>
-                <Link to="#">Registrase</Link>
-              </>
-            )}
+          <div className={`nav__menu ${open ? 'nav__menu--open' : ''}`}>
+            <Link to="/" onClick={closeMenu}>Inicio</Link>
+            <Link to="/listAnime" onClick={closeMenu}>Lista Animes</Link>
+            <Link to="/listFilms" onClick={closeMenu}>Películas</Link>
           </div>
-          
         </div>
       </nav>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

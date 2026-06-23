@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "AnimeBDRip",
+  "name": "AnimeBDRip — Información de anime",
+  "description": "Fichas técnicas, sinopsis, temporadas, capítulos y películas de anime.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +19,10 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/animeBDRip/",
+  "scope": "/animeBDRip/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#e10600",
+  "background_color": "#ededed",
+  "lang": "es"
 }
