@@ -1,0 +1,64 @@
+@import './styles/variables.css';
+
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Layout de columna a pantalla completa para que el footer
+   siempre quede al fondo aunque la página tenga poco contenido. */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Contenedor base de las páginas. Centrado y fluido en lugar de
+   márgenes laterales fijos con muchos breakpoints. */
+main {
+  flex: 1 0 auto;
+  width: min(100% - 2rem, var(--max-width));
+  margin-inline: auto;
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  padding: var(--space-md);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.route-loader {
+  text-align: center;
+  padding: var(--space-xl);
+  font-size: 1.2rem;
+}

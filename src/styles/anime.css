@@ -1,320 +1,176 @@
-/*Fondo de los elementos*/
-/*
-    #686D76;
-    #48cae8;
-    #d9d9d9; un poco mas oscuro que el ededed
-    #2d84e7; azul
-    #355baf; azul oscuro
-    #1c6fad; azul un poco mas claro
-    #343a40; gris oscuro
-    */
+/* Página de detalle de un anime. El layout base de `main` viene de index.css. */
 
-body {
-  background-color: #d9d9d9;
-}
-
-header {
-  margin-bottom: 1rem;
-}
-
-footer {
-  margin-top: 2rem;
-}
-
-main {
-  background-color: #ededed;
-  /* margin: 0rem 4rem; */
-  /*cuadrar al rato*/
-  margin: 0% 20%;
-  padding-top: 2rem;
-  box-shadow: 1px 1px 3px 1px black;
-}
-
-main>h2 {
-  /* Para que solo sea a su hijo directo*/
+main > h2 {
   text-align: center;
-  font-size: 2rem;
-  color: red;
-  margin-bottom: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
 }
 
-
+/* Ficha: imagen + datos. Mobile-first apilado, dos columnas en escritorio. */
 .info {
   display: grid;
-  grid-template-columns: 55% 45%;
-  background-color: #1f2225;
-  color: white;
-  margin: 0rem 2rem 4rem 2rem;
-  box-shadow: 1px 1px 5px 1px rgb(0, 0, 0);
-  border: 1px solid #ededed;
-}
-
-.info__imgPortada {
-  width: 100%;
+  grid-template-columns: 1fr;
+  background-color: var(--color-dark);
+  color: var(--color-text-invert);
+  margin-bottom: var(--space-xl);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
 }
 
 .info__imgPortada figure {
-  margin: .2rem 0rem;
-  height: 500px;
   width: 100%;
-  /* border: 4px solid rebeccapurple; */
+  aspect-ratio: 3 / 4;
+  max-height: 500px;
 }
 
 .info__imgPortada img {
   width: 100%;
   height: 100%;
-  object-fit: scale-down;
-}
-
-
-.info__ficha--tittle {
-  text-align: center;
-  color: red;
-  font-size: 1.2rem;
-
+  object-fit: contain;
+  background-color: var(--color-darker);
 }
 
 .info__ficha {
   display: flex;
   flex-direction: column;
-  border-left: 2px solid white;
-  padding: 4rem 1rem;
+  gap: var(--space-md);
+  padding: var(--space-lg) var(--space-md);
+  border-top: 2px solid var(--color-text-invert);
+}
 
+.info__ficha--tittle {
+  text-align: center;
+  color: var(--color-primary);
+  font-size: 1.3rem;
 }
 
 .info__ficha--datos {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* border: 2px solid black; */
-  width: 100%;
-  height: 100%;
+  gap: var(--space-xs);
 }
 
 .info__ficha--datos p {
-  font-size: 1.2rem;
-  margin: auto;
+  font-size: 1.05rem;
 }
 
+@media (min-width: 900px) {
+  .info {
+    grid-template-columns: 55% 45%;
+  }
 
+  .info__ficha {
+    border-top: none;
+    border-left: 2px solid var(--color-text-invert);
+    justify-content: center;
+  }
 
-/* Inicia la parte del resumen */
+  .info__ficha--datos {
+    align-items: center;
+  }
+}
+
+/* Galería de capturas (solo animes con backend) */
+.gallery {
+  margin-bottom: var(--space-xl);
+}
+
+.gallery__title {
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-sm);
+}
+
+.gallery__figure img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+/* Sinopsis */
+.sipnosis {
+  margin-bottom: var(--space-xl);
+}
 
 .sipnosis__tittle {
-  background-color: black;
-  color: red;
+  background-color: var(--color-darker);
+  color: var(--color-primary);
   text-align: center;
-  width: 100%;
-  padding: .5rem 0rem;
+  padding: var(--space-xs) 0;
+  border-radius: var(--radius);
 }
 
 .sipnosis__paragraph {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  text-align: justify;
 }
 
-.sipnosis__paragraph,
-.donwload {
-  /*Para que el resumen, tabla y enlaces tengan el mismo margin*/
-  margin: 2rem;
+.sipnosis__paragraph p {
+  margin-top: var(--space-sm);
 }
 
-
-/*Estilos de la tabla de informacion*/
-
-
-
-
+/* Tabla de descargas */
 .donwload__table {
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-lg);
+  overflow-x: auto;
 }
 
 .donwload__table table {
+  width: 100%;
   text-align: center;
-  margin: 0 auto;
+  border-collapse: collapse;
 }
 
 .donwload__table th {
-  padding: .5rem 4rem;
-  color: red;
-  font-size: 1.4rem;
+  padding: var(--space-xs) var(--space-sm);
+  color: var(--color-primary);
+  font-size: 1.1rem;
 }
 
 .donwload__table td {
-  padding: .5rem 0rem;
-  font-size: 1.1rem;
+  padding: var(--space-xs);
   font-weight: 600;
 }
 
-
-/* Estilos de los enlaces */
-
+/* Enlaces de descarga */
 .donwload__enlaces {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
-    "tittle tittle tittle"
-    "mega mediafire drive";
+    'tittle tittle tittle'
+    'mega mediafire drive';
   text-align: center;
+  gap: var(--space-sm);
 }
 
 .donwload__enlaces--tittle {
   grid-area: tittle;
-  color: red;
-  font-size: 1.5rem;
-  padding: 1rem;
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  padding: var(--space-sm);
 }
 
 .donwload__enlaces--link {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-}
-
-.donwload__enlaces--link h3 {
-  padding-bottom: .5rem;
+  gap: var(--space-xs);
 }
 
 .donwload__enlaces--link figure {
-  width: 80px;
-  height: 60px;
-  border-radius: 20%;
+  width: 70px;
+  height: 56px;
 }
 
 .donwload__enlaces--link img {
   width: 100%;
   height: 100%;
-
-}
-
-
-/*Responsive designe*/
-
-@media (max-width:1700px) {
-  main {
-    margin: 0% 15%;
-  }
-}
-
-@media (max-width:1625px) {
-  main {
-    margin: 0% 10%;
-  }
-
-  .donwload__table th {
-    padding: .5rem 2rem;
-    color: red;
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:1325px) {
-  main {
-    margin: 0% 8%;
-  }
-
-  .info__imgPortada figure {
-    height: 450px;
-  }
-}
-
-
-@media (max-width:1130px) {
-
-  .info {
-    margin: 2.5rem 0rem;
-  }
-
-  .info__ficha {
-    padding: 3rem .5rem;
-  }
-}
-
-@media (max-width:1100px) {
-  main {
-    margin: 0% 10%;
-  }
-}
-
-@media (max-width:900px) {
-  .info {
-    margin: 2.5rem 3rem;
-  }
-
-  .info__ficha {
-    padding: 1rem .5rem;
-    border-left: none;
-    border-top: 2px solid white;
-  }
-
-  .info {
-    display: flex;
-    flex-direction: column;
-
-  }
-
-  .info__imgPortada {
-    width: 100%;
-    margin: 1rem 0rem;
-  }
-
-  .donwload {
-    margin: 1rem .5rem;
-  }
-
-  /*tabla*/
-
-  .donwload__table th {
-    padding: .5rem 1.6rem;
-    color: red;
-    font-size: 1.1rem;
-  }
-
-  .donwload__table td {
-    padding: .5rem 0rem;
-    font-size: 1rem;
-    font-weight: 600;
-  }
-}
-
-@media (max-width:900px) {
-  main {
-    margin: 0% 5%;
-  }
-}
-
-
-@media (max-width:675px) {
-  main {
-    margin: 0;
-  }
-
-  .info {
-    margin: 2.5rem 0rem;
-  }
-
-  .sipnosis__paragraph {
-    margin: 2rem .3rem;
-  }
-
-  .donwload {
-    margin: 0;
-  }
-
-  .donwload__table table {
-    margin: 0 auto;
-  }
-
-  .donwload__table th {
-    padding: .5rem 1rem;
-  }
-
-  .donwload__table th:nth-child(2),
-  .donwload__table td:nth-child(2) {
-    display: none;
-  }
-
-  footer {
-    margin-top: 0rem;
-  }
+  object-fit: contain;
 }

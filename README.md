@@ -11,13 +11,51 @@ Una página creada para los amantes del buen anime, esta, simplemente sirve como
 
 ## Sobre el desarrollo ❔
 
-Este proyecto es creado usando [HTML](http://https://www.w3.org/TR/2011/WD-html5-20110525/index.html "HTML"), [CSS](http://https://developer.mozilla.org/en-US/docs/Web/CSS "CSS"), [JavaScript](http://https://developer.mozilla.org/en-US/docs/Web/JavaScript "JavaScript") y como libreria  [React.js](http://https://reactjs.org/ "React.js"), esas son sus librerias, tecnologias y lenguaje base.
+Este proyecto está construido con [React 19](https://react.dev/ "React"), [React Router 7](https://reactrouter.com/ "React Router") y empaquetado con [Vite](https://vite.dev/ "Vite"). El lenguaje base es JavaScript, HTML y CSS.
 
 ------------
 
 
-### 🚀  **Inicio** 
-Una vez echo un pull recomiendo usar *yarn install*  o si manejas NPM usar *npm i*, y luego *npm run start* o *yarn start* para inicializar el proyecto y poder interactuar con él en el navegador de su preferencia.
+### 🚀  **Cómo correrlo en local**
+
+**Requisitos:** [Node.js](https://nodejs.org/) 18 o superior (incluye `npm`).
+
+**Pasos:**
+
+```bash
+# 1. Clona el repositorio
+git clone https://github.com/juanfed/animeBDRip.git
+cd animeBDRip
+
+# 2. Instala las dependencias
+npm install
+
+# 3. Arranca el servidor de desarrollo
+npm run dev
+```
+
+Luego abre en tu navegador: **http://localhost:5173/animeBDRip/**
+
+> El servidor de desarrollo tiene *hot reload*: los cambios en el código se reflejan al instante.
+
+#### 📜 Comandos disponibles
+
+| Comando | Descripción |
+| --- | --- |
+| `npm run dev` | Servidor de desarrollo con hot reload (http://localhost:5173/animeBDRip/) |
+| `npm run build` | Genera el build de producción optimizado en `/dist` |
+| `npm run preview` | Sirve localmente el build de producción para revisarlo |
+| `npm run deploy` | Publica el contenido de `/dist` en GitHub Pages |
+
+#### Backend opcional
+
+La mayoría de los animes usan datos estáticos (`src/data/animes.js`). Algunos pueden enriquecer su ficha desde un backend. Para apuntar a uno, crea un archivo `.env` con:
+
+```
+VITE_API_URL=http://localhost:8080
+```
+
+Si no hay backend disponible, esas páginas degradan automáticamente a los datos estáticos.
 
 ------------
 
