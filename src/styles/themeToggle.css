@@ -1,0 +1,118 @@
+/* Interruptor de tema (claro / oscuro) con perilla deslizante animada. */
+.theme-toggle {
+  --tt-w: 58px;
+  --tt-h: 30px;
+  --tt-pad: 3px;
+  --tt-border: 2px;
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.theme-toggle__track {
+  position: relative;
+  display: inline-block;
+  width: var(--tt-w);
+  height: var(--tt-h);
+  border-radius: 99px;
+  background: rgba(0, 0, 0, 0.28);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3);
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.theme-toggle:hover .theme-toggle__track {
+  background: rgba(255, 255, 255, 0.32);
+}
+
+.theme-toggle--dark .theme-toggle__track {
+  background: rgba(10, 12, 18, 0.55);
+  border-color: rgba(139, 125, 255, 0.6);
+}
+
+/* Iconos a cada lado del riel */
+.theme-toggle__icon {
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  transform: translateY(-50%);
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.theme-toggle__icon--sun {
+  left: 7px;
+  fill: #fff3b0;
+  stroke: #fff3b0;
+  stroke-width: 1.6;
+}
+
+.theme-toggle__icon--moon {
+  right: 7px;
+  fill: #cdd6ff;
+  stroke: none;
+  opacity: 0.45;
+  transform: translateY(-50%) scale(0.8) rotate(-20deg);
+}
+
+.theme-toggle--dark .theme-toggle__icon--sun {
+  opacity: 0.4;
+  transform: translateY(-50%) scale(0.8) rotate(40deg);
+}
+.theme-toggle--dark .theme-toggle__icon--moon {
+  opacity: 1;
+  transform: translateY(-50%) scale(1) rotate(0deg);
+}
+
+/* Perilla que se desliza — es el astro (sol en claro, luna en oscuro).
+   Se centra con translateY(-50%) para no descuadrarse por el borde del riel. */
+.theme-toggle__thumb {
+  position: absolute;
+  top: 50%;
+  left: var(--tt-pad);
+  width: calc(var(--tt-h) - var(--tt-border) * 2 - var(--tt-pad) * 2);
+  height: calc(var(--tt-h) - var(--tt-border) * 2 - var(--tt-pad) * 2);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  /* Sol: disco cálido con halo */
+  background: radial-gradient(circle at 50% 42%, #fff4bf, #ffc24d 58%, #ff9e26);
+  box-shadow: 0 0 9px 2px rgba(255, 180, 40, 0.6), 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s var(--ease-spring), background var(--transition),
+    box-shadow var(--transition);
+}
+
+.theme-toggle--dark .theme-toggle__thumb {
+  transform: translate(calc(var(--tt-w) - var(--tt-h)), -50%);
+  /* Luna: disco pálido con cráteres y halo frío */
+  background:
+    radial-gradient(circle at 66% 30%, rgba(140, 152, 200, 0.55) 0 14%, transparent 15%),
+    radial-gradient(circle at 36% 64%, rgba(140, 152, 200, 0.5) 0 10%, transparent 11%),
+    radial-gradient(circle at 56% 58%, rgba(140, 152, 200, 0.4) 0 6%, transparent 7%),
+    radial-gradient(circle at 40% 38%, #fdfdff, #c7cef0);
+  box-shadow: 0 0 9px 2px rgba(150, 160, 255, 0.5), 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* En escritorio se ve pequeño: lo agrandamos un poco. */
+@media (min-width: 768px) {
+  .theme-toggle {
+    --tt-w: 70px;
+    --tt-h: 36px;
+    --tt-pad: 4px;
+  }
+
+  .theme-toggle__icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .theme-toggle__icon--sun {
+    left: 9px;
+  }
+  .theme-toggle__icon--moon {
+    right: 9px;
+  }
+}

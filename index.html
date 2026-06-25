@@ -37,6 +37,19 @@
     <link rel="manifest" href="/manifest.json" />
   </head>
   <body>
+    <!-- Aplica el tema guardado antes de pintar para evitar el parpadeo (FOUC). -->
+    <script type="text/javascript">
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = saved || (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
     <noscript>Necesitas habilitar JavaScript para usar esta aplicación.</noscript>
     <div id="root"></div>
     <!-- Restaura la ruta original tras la redirección de 404.html (SPA en GitHub Pages) -->

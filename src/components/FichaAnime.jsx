@@ -13,7 +13,7 @@ const FichaAnime = ({
   manga,
 }) => {
   return (
-    <section className="info">
+    <section className="info reveal">
       <div className="info__imgPortada">
         <figure>
           <img src={image} alt={`Portada de ${title}`} loading="lazy" decoding="async" />

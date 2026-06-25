@@ -3,8 +3,12 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import App from './App.jsx'
+import { initReveal } from './utils/reveal.js'
 
 import './index.css'
+
+// Animaciones de entrada al hacer scroll (incluye rutas cargadas con lazy).
+initReveal()
 
 // Code-splitting por ruta: cada página se carga en su propio chunk.
 const Inicio = lazy(() => import('./pages/Inicio.jsx'))

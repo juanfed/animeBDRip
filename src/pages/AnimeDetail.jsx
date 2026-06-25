@@ -79,7 +79,7 @@ const AnimeDetail = () => {
       <title>{`${anime.title} — AnimeBDRip`}</title>
       <meta name="description" content={anime.synopsis?.[0] ?? `Ficha de ${anime.title}`} />
 
-      <h2>{anime.title}</h2>
+      <h2 className="reveal">{anime.title}</h2>
 
       <FichaAnime
         image={anime.image}

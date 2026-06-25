@@ -1,11 +1,15 @@
-/* Header mobile-first. Sticky con auto-ocultar al bajar / mostrar al subir. */
+/* Header mobile-first. Sticky con auto-ocultar al bajar / mostrar al subir.
+   Fondo con degradado de marca + desenfoque (glassmorphism). */
 .nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--color-primary);
   color: var(--color-text-invert);
-  transition: transform 0.3s ease;
+  background: var(--grad-brand);
+  background-size: 180% 180%;
+  animation: gradientShift 14s var(--ease) infinite;
+  box-shadow: 0 6px 24px -8px rgba(0, 0, 0, 0.45);
+  transition: transform 0.35s var(--ease);
 }
 
 .nav--hidden {
@@ -14,7 +18,7 @@
 
 .nav__container {
   position: relative;
-  width: min(100% - 1rem, var(--max-width));
+  width: min(92%, var(--max-width));
   margin-inline: auto;
   min-height: var(--header-height-mobile);
   display: flex;
@@ -24,60 +28,153 @@
 }
 
 .nav__logo a {
+  display: inline-flex;
+  align-items: baseline;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 0.3px;
   color: var(--color-text-invert);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  transition: transform var(--transition);
+}
+
+.nav__logo a span {
+  font-weight: 800;
+  color: #fff;
+  /* Brillo translúcido para la segunda palabra */
+  background: linear-gradient(180deg, #ffffff, rgba(255, 255, 255, 0.7));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav__logo a:hover {
+  transform: translateY(-1px) scale(1.02);
 }
 
 .nav a {
   color: var(--color-text-invert);
 }
 
+/* Cluster de acciones (tema + hamburguesa) */
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
 /* Botón hamburguesa (solo móvil) */
 .nav__label {
   display: inline-flex;
   align-items: center;
-  background: none;
-  border: 0;
-  padding: 0;
+  /* Gris claro (tirando a blanco), igual al fondo de las cards en ambos modos */
+  background: #eceef3;
+  border: 1px solid #cdd3df;
+  border-radius: 10px;
+  padding: 2px 4px;
   cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.nav__label:hover {
+  background: #e2e6ef;
+}
+
+.nav__label:active {
+  transform: scale(0.92);
 }
 
 .nav__img {
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
+  /* Las rayas conservan el rojo oscuro intenso del SVG (rgb(109,0,0)) */
 }
 
-/* Menú: oculto en móvil hasta abrir */
+/* Menú: oculto en móvil hasta abrir (panel desplegable con desenfoque) */
 .nav__menu {
   position: absolute;
   top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: var(--color-primary);
+  /* Rompe el ancho del contenedor (92%) para llegar de borde a borde */
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  /* Mismo color de fondo que la página (gris en claro, oscuro en oscuro) */
+  background: var(--color-bg);
+  backdrop-filter: blur(6px);
+  /* Borde inferior para separar el menú del contenido al desplegarse */
+  border-bottom: 4px solid #6d0000;
   display: grid;
-  gap: var(--space-sm);
-  padding: var(--space-md) var(--space-sm);
+  gap: 0;
+  padding: 0;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 600;
+  box-shadow: var(--shadow-lg);
 
   transform: scaleY(0);
   transform-origin: top;
-  transition: transform 0.25s ease;
+  opacity: 0;
+  transition: transform 0.28s var(--ease), opacity 0.28s var(--ease);
 }
 
 .nav__menu--open {
   transform: scaleY(1);
+  opacity: 1;
 }
 
+/* Cada opción ocupa todo el ancho, sin huecos, con línea divisora */
 .nav__menu a {
-  display: inline-block;
-  transition: opacity 0.2s ease;
+  display: block;
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 0;
+  /* Texto legible sobre el fondo de la página (oscuro en claro, claro en oscuro) */
+  color: var(--color-text);
+  border-bottom: 3px solid var(--color-border-strong);
+  transition: background var(--transition), padding-left var(--transition),
+    letter-spacing var(--transition);
 }
 
-.nav__menu a:hover {
-  opacity: 0.75;
+/* La última opción no necesita línea divisora */
+.nav__menu a:last-child {
+  border-bottom: none;
+}
+
+/* Hover: fondo más oscuro (no blanquecino) + pequeña animación de entrada */
+.nav__menu a:hover,
+.nav__menu a:focus-visible {
+  /* Diferenciador: oscurece sobre fondo claro, aclara sobre fondo oscuro */
+  background: color-mix(in srgb, var(--color-bg), var(--color-text) 14%);
+  padding-left: calc(var(--space-md) + var(--space-sm));
+  letter-spacing: 0.4px;
+}
+
+/* Animación escalonada de cada opción al abrir el menú */
+.nav__menu--open a {
+  animation: navItemIn 0.32s var(--ease) backwards;
+}
+
+.nav__menu--open a:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.nav__menu--open a:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.nav__menu--open a:nth-child(3) {
+  animation-delay: 0.19s;
+}
+
+@keyframes navItemIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Escritorio: menú en línea, sin hamburguesa */
@@ -86,14 +183,24 @@
     min-height: var(--header-height);
   }
 
+  .nav__logo a {
+    font-size: 1.7rem;
+  }
+
   .nav__label {
     display: none;
   }
 
+  /* Empuja menú + acciones a la derecha, con el logo a la izquierda */
   .nav__menu {
     position: static;
     width: auto;
+    margin-left: auto;
     background: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+    border-bottom: none;
+    opacity: 1;
     display: flex;
     align-items: center;
     gap: var(--space-md);
@@ -105,7 +212,13 @@
   /* línea inferior animada en hover (escritorio) */
   .nav__menu a {
     position: relative;
-    padding-bottom: 4px;
+    width: auto;
+    padding: 0 0 4px;
+    border-radius: 0;
+    border-bottom: none;
+    animation: none;
+    /* Sobre la cabecera roja el texto vuelve a ser blanco */
+    color: var(--color-text-invert);
   }
 
   .nav__menu a::after {
@@ -115,14 +228,18 @@
     bottom: 0;
     width: 100%;
     height: 3px;
-    background-color: var(--color-surface);
+    border-radius: 3px;
+    background: var(--color-text-invert);
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s var(--ease);
   }
 
   .nav__menu a:hover {
+    background: transparent;
     opacity: 1;
+    padding: 0 0 4px;
+    letter-spacing: normal;
   }
 
   .nav__menu a:hover::after {

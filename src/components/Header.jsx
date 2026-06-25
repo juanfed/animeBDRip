@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import hamburger from '../assets/menuHamburguer.svg'
+import ThemeToggle from './ThemeToggle.jsx'
 
 import '../styles/header.css'
 
@@ -34,25 +35,29 @@ const Header = () => {
         <div className="nav__container">
           <h1 className="nav__logo">
             <Link to="/" id="tittle" onClick={closeMenu}>
-              AnimeBDRip
+              Anime<span>BDRip</span>
             </Link>
           </h1>
-
-          {/* Botón hamburguesa (solo móvil) */}
-          <button
-            type="button"
-            className="nav__label"
-            aria-label="Abrir menú de navegación"
-            aria-expanded={open}
-            onClick={() => setOpen((o) => !o)}
-          >
-            <img src={hamburger} alt="" aria-hidden="true" className="nav__img" />
-          </button>
 
           <div className={`nav__menu ${open ? 'nav__menu--open' : ''}`}>
             <Link to="/" onClick={closeMenu}>Inicio</Link>
             <Link to="/listAnime" onClick={closeMenu}>Lista Animes</Link>
             <Link to="/listFilms" onClick={closeMenu}>Películas</Link>
+          </div>
+
+          {/* Acciones siempre visibles: cambio de tema + menú móvil */}
+          <div className="nav__actions">
+            <ThemeToggle />
+
+            <button
+              type="button"
+              className="nav__label"
+              aria-label="Abrir menú de navegación"
+              aria-expanded={open}
+              onClick={() => setOpen((o) => !o)}
+            >
+              <img src={hamburger} alt="" aria-hidden="true" className="nav__img" />
+            </button>
           </div>
         </div>
       </nav>

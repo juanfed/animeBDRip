@@ -16,10 +16,30 @@ html {
 
 body {
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  /* Fondo con un degradado sutil + dos focos de color que dan profundidad. */
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(60rem 40rem at 110% -10%, color-mix(in srgb, var(--color-primary) 14%, transparent), transparent 60%),
+    radial-gradient(50rem 40rem at -10% 0%, color-mix(in srgb, var(--color-accent) 14%, transparent), transparent 55%),
+    linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-2) 100%);
+  background-attachment: fixed;
+}
+
+/* Transición global suave al cambiar de tema. */
+body,
+.nav,
+.card,
+.info,
+footer,
+main,
+.proximos__chip,
+.sipnosis__tittle {
+  transition: background-color var(--transition), border-color var(--transition),
+    color var(--transition), box-shadow var(--transition);
 }
 
 a {
@@ -36,6 +56,36 @@ ul {
   list-style: none;
 }
 
+::selection {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Scrollbar a juego con la marca */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) transparent;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--grad-brand);
+  border-radius: 99px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 /* Layout de columna a pantalla completa para que el footer
    siempre quede al fondo aunque la página tenga poco contenido. */
 #root {
@@ -44,21 +94,104 @@ ul {
   min-height: 100vh;
 }
 
-/* Contenedor base de las páginas. Centrado y fluido en lugar de
-   márgenes laterales fijos con muchos breakpoints. */
+/* Contenedor base de las páginas. */
 main {
   flex: 1 0 auto;
-  width: min(100% - 2rem, var(--max-width));
+  width: min(92%, var(--max-width));
   margin-inline: auto;
-  margin-top: var(--space-sm);
-  margin-bottom: var(--space-sm);
-  padding: var(--space-md);
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-md);
+  padding: clamp(var(--space-md), 4vw, var(--space-xl));
   background-color: var(--color-surface);
-  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
 }
 
 .route-loader {
   text-align: center;
   padding: var(--space-xl);
   font-size: 1.2rem;
+  color: var(--color-text-muted);
+}
+
+/* ---------- Animaciones de revelado al hacer scroll ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+  will-change: opacity, transform;
+}
+.reveal--visible {
+  opacity: 1;
+  transform: none;
+}
+/* Escalonado opcional para grupos de elementos */
+.reveal--d1 {
+  transition-delay: 0.08s;
+}
+.reveal--d2 {
+  transition-delay: 0.16s;
+}
+.reveal--d3 {
+  transition-delay: 0.24s;
+}
+
+/* ---------- Keyframes reutilizables ---------- */
+@keyframes floatGlow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes sheen {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Respeta a quien prefiere menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }

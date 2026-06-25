@@ -23,13 +23,13 @@ const ListAnime = () => {
       <meta name="description" content="Listado completo de animes disponibles en AnimeBDRip, ordenados alfabéticamente." />
 
       <section className="listAnime">
-        <div className="listAnime__Encabezado">
+        <div className="listAnime__Encabezado reveal">
           <h2>Lista de animes</h2>
         </div>
 
         <section className="lista__animes">
           {Object.entries(grupos).map(([letra, items]) => (
-            <div key={letra}>
+            <div key={letra} className="lista__grupo reveal">
               <h3 className="lista__animes--title">{letra}</h3>
               <ul className="listAnime__animes">
                 {items.map((anime) => (
