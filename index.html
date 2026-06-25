@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/animeBDRip/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#e10600" />
+
+    <title>AnimeBDRip — Información de anime, temporadas y películas</title>
+    <meta
+      name="description"
+      content="AnimeBDRip es una página para los amantes del anime: fichas técnicas, sinopsis, temporadas, capítulos y películas de tus series favoritas."
+    />
+    <link rel="canonical" href="https://juanfed.github.io/animeBDRip/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AnimeBDRip — Información de anime" />
+    <meta
+      property="og:description"
+      content="Fichas técnicas, sinopsis, temporadas, capítulos y películas de anime."
+    />
+    <meta property="og:url" content="https://juanfed.github.io/animeBDRip/" />
+    <meta property="og:image" content="https://juanfed.github.io/animeBDRip/logo512.png" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AnimeBDRip — Información de anime" />
+    <meta
+      name="twitter:description"
+      content="Fichas técnicas, sinopsis, temporadas, capítulos y películas de anime."
+    />
+    <meta name="twitter:image" content="https://juanfed.github.io/animeBDRip/logo512.png" />
+
+    <link rel="apple-touch-icon" href="/animeBDRip/logo192.png" />
+    <link rel="manifest" href="/animeBDRip/manifest.json" />
+    <script type="module" crossorigin src="/animeBDRip/assets/index-BxWDSQxy.js"></script>
+    <link rel="stylesheet" crossorigin href="/animeBDRip/assets/index-DrRAbdwO.css">
+  </head>
+  <body>
+    <!-- Aplica el tema guardado antes de pintar para evitar el parpadeo (FOUC). -->
+    <script type="text/javascript">
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = saved || (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+    <noscript>Necesitas habilitar JavaScript para usar esta aplicación.</noscript>
+    <div id="root"></div>
+    <!-- Restaura la ruta original tras la redirección de 404.html (SPA en GitHub Pages) -->
+    <script type="text/javascript">
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&');
+            })
+            .join('?');
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      })(window.location);
+    </script>
+  </body>
+</html>
