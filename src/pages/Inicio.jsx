@@ -19,10 +19,9 @@ const Inicio = () => {
         content="Fichas técnicas, sinopsis, temporadas, capítulos y películas de tus animes favoritos."
       />
 
-      <section className="intro">
-        <div className="intro__h1">
-          <h2>Bienvenidos</h2>
-        </div>
+      <section className="intro reveal">
+        <span className="intro__badge">★ Anime en calidad BD</span>
+        <h2 className="intro__title">Bienvenido a AnimeBDRip</h2>
         <div className="intro__paragraph">
           <p>
             Hola a todos, esta es una página que estoy haciendo no solo porque me gusta ver
@@ -39,31 +38,33 @@ const Inicio = () => {
       </section>
 
       <section className="anime">
-        <div className="anime__tittle">
-          <h2>Animes agregados</h2>
+        <div className="section__head reveal">
+          <h2 className="section__title">Animes agregados</h2>
+          <span className="section__count">{animes.length}</span>
         </div>
 
         <div className="cards--anime">
           {animes.map((anime) => (
-            <CardAnime
-              key={anime.slug}
-              ruta={`/listAnime/${anime.slug}`}
-              title={anime.title}
-              imagen={anime.image}
-              cap={anime.chapters}
-              tem={anime.seasons}
-            />
+            <div className="reveal" key={anime.slug}>
+              <CardAnime
+                ruta={`/listAnime/${anime.slug}`}
+                title={anime.title}
+                imagen={anime.image}
+                cap={anime.chapters}
+                tem={anime.seasons}
+              />
+            </div>
           ))}
         </div>
       </section>
 
-      <section className="newAnimes">
-        <div className="newAnimes__tittle">
-          <h2>Próximos animes</h2>
+      <section className="newAnimes reveal">
+        <div className="section__head section__head--center">
+          <h2 className="section__title">Próximos animes</h2>
         </div>
-        <div className="newAnimes__list">
+        <div className="proximos__list">
           {PROXIMOS.map((name) => (
-            <h4 key={name}>{name}</h4>
+            <span className="proximos__chip" key={name}>{name}</span>
           ))}
         </div>
       </section>

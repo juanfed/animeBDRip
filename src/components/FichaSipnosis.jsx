@@ -1,6 +1,6 @@
 const FichaSipnosis = ({ paragraphs = [] }) => {
   return (
-    <section className="sipnosis">
+    <section className="sipnosis reveal">
       <div className="sipnosis__tittle">
         <h2>Sinopsis</h2>
       </div>

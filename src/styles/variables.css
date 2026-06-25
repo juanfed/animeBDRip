@@ -1,14 +1,52 @@
-/* Tokens de diseño: única fuente de colores, espaciados y medidas. */
-:root {
-  /* Colores */
-  --color-bg: #d9d9d9;
-  --color-surface: #ededed;
-  --color-dark: #1f2225;
-  --color-darker: #121417;
-  --color-text: #1a1a1a;
+/* Tokens de diseño: única fuente de colores, espaciados y medidas.
+   El tema se controla con el atributo [data-theme] en <html>.
+   Por defecto (:root) = modo claro; [data-theme="dark"] = modo oscuro. */
+
+:root,
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  /* Fondos y superficies */
+  --color-bg: #eceef3;
+  --color-bg-2: #e2e6ef; /* segundo tono para el degradado de fondo */
+  --color-surface: #ffffff;
+  --color-surface-2: #f2f4f8;
+
+  /* Paneles oscuros (ficha, cabeceras de sinopsis) — siguen siendo oscuros */
+  --color-dark: #1c1f27;
+  --color-darker: #14161d;
+
+  /* Texto */
+  --color-text: #14161d;
+  --color-text-muted: #5b6472;
   --color-text-invert: #ffffff;
-  --color-primary: #e10600;
-  --color-border: #c0c0c0;
+
+  /* Marca y acento */
+  --color-primary: #e11d2a;
+  --color-primary-strong: #b3121d;
+  /* Rojo oscuro para acentos sobre paneles oscuros (igual en ambos temas) */
+  --color-red-deep: #a50f1b;
+  --color-accent: #6d5efc;
+  --color-accent-2: #ff5da2;
+
+  /* Bordes y líneas */
+  --color-border: #e2e6ed;
+  --color-border-strong: #cdd3df;
+
+  /* Degradados de marca */
+  /* Rojo saturado y sólido (sin el rosa lavado del stop brillante anterior) */
+  --grad-brand: linear-gradient(135deg, #e51022 0%, #d20f1f 55%, #b00f1c 100%);
+  /* Hero unificado con el header: mismo rojo de marca, sin violeta */
+  --grad-hero: linear-gradient(120deg, #e51022 0%, #cc0f1d 48%, #a50f1b 100%);
+  --grad-accent: linear-gradient(135deg, #6d5efc, #ff5da2);
+  --grad-sheen: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.55) 50%, transparent 70%);
+
+  /* Sombras */
+  --shadow-sm: 0 1px 3px rgba(20, 22, 29, 0.08), 0 1px 2px rgba(20, 22, 29, 0.06);
+  --shadow-md: 0 6px 18px rgba(20, 22, 29, 0.12);
+  --shadow-lg: 0 18px 40px -12px rgba(20, 22, 29, 0.28);
+  --shadow-glow: 0 10px 30px -8px rgba(225, 29, 42, 0.45);
+  --ring: rgba(225, 29, 42, 0.35);
 
   /* Espaciado */
   --space-xs: 0.5rem;
@@ -18,14 +56,55 @@
   --space-xl: 3rem;
 
   /* Layout */
-  --max-width: 1200px;
-  --radius: 8px;
+  --max-width: 1480px;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-lg: 20px;
 
-  /* Sombras */
-  --shadow-sm: 0 0 4px 1px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 2px 8px 1px rgba(0, 0, 0, 0.35);
+  /* Movimiento */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition: 0.25s var(--ease);
+  --transition-slow: 0.45s var(--ease);
 
   /* Header */
   --header-height: 4.8rem;
-  --header-height-mobile: 3rem;
+  --header-height-mobile: 3.4rem;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --color-bg: #0b0d12;
+  --color-bg-2: #12151d;
+  --color-surface: #161a23;
+  --color-surface-2: #1e2330;
+
+  --color-dark: #1e2330;
+  --color-darker: #0a0c11;
+
+  --color-text: #e9ecf4;
+  --color-text-muted: #9aa3b6;
+  --color-text-invert: #ffffff;
+
+  --color-primary: #ff3b4e;
+  --color-primary-strong: #ff6f7c;
+  --color-accent: #8b7dff;
+  --color-accent-2: #ff79b0;
+
+  --color-border: #272d3a;
+  --color-border-strong: #343c4d;
+
+  /* Rojos profundos y saturados (más oscuros que en modo claro, nada lavados) */
+  --grad-brand: linear-gradient(135deg, #b00f1c 0%, #8c0c16 55%, #680910 100%);
+  /* Hero unificado con el header: mismo rojo profundo, sin violeta */
+  --grad-hero: linear-gradient(120deg, #a50f1b 0%, #7d0b14 48%, #560810 100%);
+  --grad-accent: linear-gradient(135deg, #6b5acc, #d65a92);
+  --grad-sheen: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.12) 50%, transparent 70%);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 8px 22px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 22px 48px -12px rgba(0, 0, 0, 0.7);
+  --shadow-glow: 0 12px 34px -8px rgba(255, 59, 78, 0.5);
+  --ring: rgba(255, 59, 78, 0.45);
 }

@@ -2,9 +2,20 @@
 
 main > h2 {
   text-align: center;
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  color: var(--color-primary);
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 800;
   margin-bottom: var(--space-lg);
+  background: var(--grad-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* En modo oscuro el título va en gris claro, no en rojo */
+[data-theme='dark'] main > h2 {
+  background: none;
+  -webkit-text-fill-color: #cfd3dc;
+  color: #cfd3dc;
 }
 
 /* Ficha: imagen + datos. Mobile-first apilado, dos columnas en escritorio. */
@@ -14,46 +25,69 @@ main > h2 {
   background-color: var(--color-dark);
   color: var(--color-text-invert);
   margin-bottom: var(--space-xl);
-  border-radius: var(--radius);
+  border: 2px solid var(--color-red-deep);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
+}
+
+.info__imgPortada {
+  overflow: hidden;
 }
 
 .info__imgPortada figure {
   width: 100%;
   aspect-ratio: 3 / 4;
-  max-height: 500px;
+  max-height: 520px;
 }
 
 .info__imgPortada img {
   width: 100%;
   height: 100%;
+  /* Imagen completa sin recortar; el sobrante queda en negro */
   object-fit: contain;
-  background-color: var(--color-darker);
+  object-position: center;
+  background-color: #000;
 }
 
 .info__ficha {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: var(--space-md);
   padding: var(--space-lg) var(--space-md);
-  border-top: 2px solid var(--color-text-invert);
+  border-top: 2px solid var(--color-red-deep);
 }
 
 .info__ficha--tittle {
   text-align: center;
-  color: var(--color-primary);
-  font-size: 1.3rem;
+  color: var(--color-red-deep);
+  font-size: 1.4rem;
+  font-weight: 800;
 }
 
 .info__ficha--datos {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--space-xs);
 }
 
 .info__ficha--datos p {
   font-size: 1.05rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  transition: background var(--transition);
+}
+
+.info__ficha--datos p:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.info__ficha--datos b {
+  color: var(--color-red-deep);
 }
 
 @media (min-width: 900px) {
@@ -63,7 +97,7 @@ main > h2 {
 
   .info__ficha {
     border-top: none;
-    border-left: 2px solid var(--color-text-invert);
+    border-left: 2px solid var(--color-red-deep);
     justify-content: center;
   }
 
@@ -78,9 +112,11 @@ main > h2 {
 }
 
 .gallery__title {
-  color: var(--color-primary);
+  color: var(--color-text);
   text-align: center;
   margin-bottom: var(--space-md);
+  font-size: 1.4rem;
+  font-weight: 800;
 }
 
 .gallery__grid {
@@ -89,9 +125,20 @@ main > h2 {
   gap: var(--space-sm);
 }
 
+.gallery__figure {
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
 .gallery__figure img {
   width: 100%;
   border-radius: var(--radius);
+  transition: transform 0.5s var(--ease);
+}
+
+.gallery__figure:hover img {
+  transform: scale(1.06);
 }
 
 /* Sinopsis */
@@ -100,16 +147,19 @@ main > h2 {
 }
 
 .sipnosis__tittle {
-  background-color: var(--color-darker);
-  color: var(--color-primary);
+  background: var(--grad-brand);
+  color: #fff;
   text-align: center;
-  padding: var(--space-xs) 0;
+  padding: var(--space-sm) 0;
   border-radius: var(--radius);
+  font-weight: 800;
+  box-shadow: var(--shadow-glow);
 }
 
 .sipnosis__paragraph {
   font-size: 1.05rem;
   text-align: justify;
+  color: var(--color-text);
 }
 
 .sipnosis__paragraph p {
@@ -120,23 +170,39 @@ main > h2 {
 .donwload__table {
   margin-bottom: var(--space-lg);
   overflow-x: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
 }
 
 .donwload__table table {
   width: 100%;
   text-align: center;
   border-collapse: collapse;
+  overflow: hidden;
+}
+
+.donwload__table thead {
+  background: var(--color-surface-2);
 }
 
 .donwload__table th {
-  padding: var(--space-xs) var(--space-sm);
+  padding: var(--space-sm);
   color: var(--color-primary);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .donwload__table td {
-  padding: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
   font-weight: 600;
+  border-top: 1px solid var(--color-border);
+}
+
+.donwload__table tbody tr {
+  transition: background var(--transition);
+}
+
+.donwload__table tbody tr:hover {
+  background: color-mix(in srgb, var(--color-primary) 8%, transparent);
 }
 
 /* Enlaces de descarga */
@@ -152,8 +218,9 @@ main > h2 {
 
 .donwload__enlaces--tittle {
   grid-area: tittle;
-  color: var(--color-primary);
+  color: var(--color-text);
   font-size: 1.4rem;
+  font-weight: 800;
   padding: var(--space-sm);
 }
 
@@ -162,6 +229,18 @@ main > h2 {
   flex-direction: column;
   align-items: center;
   gap: var(--space-xs);
+  padding: var(--space-sm);
+  border-radius: var(--radius);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  transition: transform 0.3s var(--ease-spring), box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+.donwload__enlaces--link:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: color-mix(in srgb, var(--color-primary) 50%, transparent);
 }
 
 .donwload__enlaces--link figure {

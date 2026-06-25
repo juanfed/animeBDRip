@@ -2,7 +2,7 @@ import Logos from './Logos.js'
 
 const FichaDonwload = () => {
   return (
-    <section className="donwload">
+    <section className="donwload reveal">
       <div className="donwload__table">
         <table>
           <thead>
